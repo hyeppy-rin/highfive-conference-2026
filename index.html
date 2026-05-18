@@ -1,0 +1,3187 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>원티드 하이파이브 2026 — 확장의 시대</title>
+  <meta name="description" content="AI 시대의 업무 변화와 경계를 허무는 일의 미래. PO, PM, UX 디자이너를 위한 하이파이브 2026 컨퍼런스 리포트.">
+  <meta property="og:title" content="원티드 하이파이브 2026 — 확장의 시대">
+  <meta property="og:description" content="AI 시대의 업무 변화와 직무 역량에 관한 실전 인사이트. PO, UX, Growth 전문가들의 세션 총정리.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="videoframe_13466.png">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f8f9fa;
+      --surface2: #f0f2f5;
+      --border: #e5e7eb;
+      --text: #111827;
+      --text2: #6b7280;
+      --text3: #9ca3af;
+      --ux: #7c6af7;
+      --ux-bg: #f0effe;
+      --tech: #2563eb;
+      --tech-bg: #eff6ff;
+      --po: #059669;
+      --po-bg: #ecfdf5;
+      --growth: #d97706;
+      --growth-bg: #fffbeb;
+      --special: #dc2626;
+      --special-bg: #fef2f2;
+      --summary: #374151;
+      --summary-bg: #f3f4f6;
+      --font: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      --r: 10px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1117;
+        --surface: #1a1d27;
+        --surface2: #252836;
+        --border: #2d3149;
+        --text: #f1f5f9;
+        --text2: #94a3b8;
+        --text3: #64748b;
+        --ux: #a78bfa;
+        --ux-bg: #1e1a3a;
+        --tech: #60a5fa;
+        --tech-bg: #172039;
+        --po: #34d399;
+        --po-bg: #0d2e22;
+        --growth: #fbbf24;
+        --growth-bg: #2d1f05;
+        --special: #f87171;
+        --special-bg: #2d0f0f;
+        --summary: #9ca3af;
+        --summary-bg: #1f2937;
+      }
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ════════════════════════════════════════════
+       HOME VIEW — HERO
+    ════════════════════════════════════════════ */
+    #view-home {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-shell {
+      height: 100vh;
+      background: url('videoframe_13466.png') center top / cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      padding: 40px 40px 36px;
+      width: 100%;
+    }
+
+    .hero-top {
+      flex-shrink: 0;
+      padding-bottom: 32px;
+    }
+
+    .conf-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .hero-shell {
+        background: url('videoframe_13466.png') center top / cover no-repeat;
+      }
+
+      .conf-eyebrow {
+        color: var(--text3);
+      }
+
+      .conf-title {
+        color: var(--text) !important;
+      }
+    }
+
+    .conf-title {
+      font-size: clamp(44px, 7.5vw, 96px);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1.0;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+
+    .conf-sub {
+      font-size: clamp(14px, 1.8vw, 20px);
+      font-weight: 500;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .conf-sub {
+        color: var(--text2);
+      }
+    }
+
+    .conf-meta {
+      font-size: 15px;
+      color: #fff;
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .conf-meta {
+        color: var(--text3);
+      }
+    }
+
+    .conf-meta span+span::before {
+      content: "·";
+      margin-right: 6px;
+      opacity: 0.5;
+    }
+
+    /* ── GRID ── */
+    .grid-wrap {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-height: 0;
+    }
+
+    .grid-label {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 12px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .grid-label {
+        color: var(--text3);
+      }
+    }
+
+    .session-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    /* frosted glass cards */
+    .card {
+      display: flex;
+      flex-direction: column;
+      padding: 16px 18px;
+      border-radius: var(--r);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .card {
+        background: rgba(26, 29, 39, 0.85);
+        border-color: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .card:focus-visible {
+      outline: 2px solid var(--text);
+      outline-offset: 2px;
+    }
+
+
+    .track-pill {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      width: fit-content;
+    }
+
+    .card.ux .track-pill {
+      background: var(--ux-bg);
+      color: var(--ux);
+    }
+
+    .card.tech .track-pill {
+      background: var(--tech-bg);
+      color: var(--tech);
+    }
+
+    .card.po .track-pill {
+      background: var(--po-bg);
+      color: var(--po);
+    }
+
+    .card.growth .track-pill {
+      background: var(--growth-bg);
+      color: var(--growth);
+    }
+
+    .card.special .track-pill {
+      background: var(--special-bg);
+      color: var(--special);
+    }
+
+    .card.summary .track-pill {
+      background: var(--summary-bg);
+      color: var(--summary);
+    }
+
+    .card-title {
+      font-size: clamp(13px, 1.86vw, 26px);
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.4;
+      margin-bottom: 4px;
+      flex: 1;
+    }
+
+    .card-company {
+      font-size: 12px;
+      color: var(--text3);
+      margin-top: auto;
+    }
+
+    /* hero footer */
+    .hero-footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 20px 40px;
+      text-align: center;
+    }
+
+    .hero-footer p {
+      font-size: 13px;
+      color: var(--text3);
+      margin-bottom: 4px;
+    }
+
+    .hero-footer a {
+      color: var(--text2);
+      text-decoration: none;
+    }
+
+    .hero-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ════════════════════════════════════════════
+       SESSION DETAIL VIEW
+    ════════════════════════════════════════════ */
+    #view-session {
+      position: fixed;
+      inset: 0;
+      z-index: 500;
+      background: rgba(0, 0, 0, 0.55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 16px;
+    }
+
+    body.modal-open {
+      overflow: hidden;
+    }
+
+    /* ── MODAL BOX ── */
+    .modal-box {
+      background: var(--bg);
+      border-radius: 16px;
+      width: 100%;
+      max-width: 900px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .modal-header {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .modal-body {
+      flex: 1;
+      min-height: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .modal-close-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 7px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--text2);
+      font-family: var(--font);
+      transition: background 0.12s, color 0.12s;
+    }
+
+    .modal-close-btn:hover {
+      color: var(--text);
+      background: var(--border);
+    }
+
+    /* ── MODAL TABS ── */
+    .modal-tabs {
+      flex-shrink: 0;
+      display: flex;
+      padding: 0 24px;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+    }
+
+    .tab-btn {
+      padding: 11px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      font-family: var(--font);
+      color: var(--text3);
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      cursor: pointer;
+      margin-bottom: -1px;
+      transition: color 0.12s, border-color 0.12s;
+    }
+
+    .tab-btn:hover {
+      color: var(--text2);
+    }
+
+    .tab-btn.active {
+      color: var(--text);
+      border-bottom-color: var(--text);
+    }
+
+    .tab-btn[disabled] {
+      opacity: 0.3;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    .tab-pane {
+      display: none;
+    }
+
+    .tab-pane.active {
+      display: block;
+      flex: 1;
+      min-height: 0;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    /* ── ARTICLE TAB CONTENT ── */
+    .article-wrap {
+      padding: 40px 56px 64px;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .article-sess {
+      display: none;
+    }
+
+    .article-sess.active {
+      display: block;
+    }
+
+    .article-lead {
+      font-size: 15px;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--text2);
+      line-height: 1.65;
+      padding: 16px 20px;
+      background: var(--surface);
+      border-left: 3px solid var(--border);
+      border-radius: 0 var(--r) var(--r) 0;
+      margin-bottom: 28px;
+    }
+
+    .article-wrap p {
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .article-wrap h2 {
+      font-size: 21px;
+      font-weight: 800;
+      color: var(--text);
+      margin: 40px 0 10px;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+    }
+
+    .article-wrap h2:first-child {
+      margin-top: 0;
+    }
+
+    .article-wrap h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      margin: 28px 0 8px;
+      line-height: 1.4;
+    }
+
+    .article-wrap ul,
+    .article-wrap ol {
+      padding-left: 22px;
+      margin-bottom: 16px;
+    }
+
+    .article-wrap li {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .article-insight {
+      font-size: 14px;
+      font-weight: 700;
+      background: var(--surface2);
+      border-left: 3px solid var(--border);
+      padding: 12px 16px;
+      border-radius: 0 var(--r) var(--r) 0;
+      margin: 8px 0 20px;
+      color: var(--text2);
+    }
+
+    .article-section-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 36px 0;
+    }
+
+    .article-img-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin: 14px 0 24px;
+    }
+
+    /* cols-1: 이미지 1장을 전체 너비로 */
+    .article-img-grid.cols-1 {
+      grid-template-columns: 1fr;
+    }
+
+    /* cols-3: 3컬럼 */
+    .article-img-grid.cols-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .article-img-link {
+      display: block;
+      overflow: hidden;
+      border-radius: var(--r);
+      border: 1px solid var(--border);
+      cursor: zoom-in;
+      transition: opacity 0.15s;
+    }
+
+    .article-img-link:hover {
+      opacity: 0.85;
+    }
+
+    .article-img {
+      width: 100%;
+      border-radius: var(--r);
+      object-fit: cover;
+      display: block;
+      background: var(--surface2);
+    }
+
+    @media (max-width: 768px) {
+      .article-wrap {
+        padding: 28px 16px 48px;
+      }
+
+      .article-img-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .article-img-grid.cols-3 {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* ── Grid Header & Lunch Button ── */
+    .grid-header {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 12px;
+      width: 100%;
+    }
+
+    .lunch-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 18px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 20px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                  transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                  box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      letter-spacing: -0.01em;
+    }
+
+    .lunch-btn:hover {
+      background: rgba(255, 255, 255, 0.98);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .lunch-btn:active {
+      transform: translateY(0);
+    }
+
+    /* ── Chat Tab ── */
+    .chat-wrap {
+      padding: 40px 56px 64px;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .chat-topic {
+      margin-bottom: 36px;
+    }
+
+    .chat-topic-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text3);
+      margin-bottom: 12px;
+      padding-left: 4px;
+    }
+
+    .chat-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .chat-row.right {
+      flex-direction: row-reverse;
+    }
+
+    .chat-avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-top: 2px;
+    }
+
+    .chat-avatar.mc {
+      background: #64748b;
+    }
+
+    .chat-avatar.p1 {
+      background: #6366f1;
+    }
+
+    .chat-avatar.p2 {
+      background: #0ea5e9;
+    }
+
+    .chat-avatar.p3 {
+      background: #10b981;
+    }
+
+    .chat-avatar.p4 {
+      background: #f59e0b;
+    }
+
+    .chat-name {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--text3);
+      margin-bottom: 3px;
+    }
+
+    .chat-row.right .chat-name {
+      text-align: right;
+    }
+
+    .chat-bubble {
+      max-width: 72%;
+    }
+
+    .chat-bubble-inner {
+      padding: 11px 15px;
+      border-radius: 4px 16px 16px 16px;
+      font-size: 13.5px;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--surface2);
+    }
+
+    .chat-row.right .chat-bubble-inner {
+      border-radius: 16px 4px 16px 16px;
+      background: #ede9fe;
+      color: #3730a3;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .chat-row.right .chat-bubble-inner {
+        background: #312e81;
+        color: #e0e7ff;
+      }
+
+      .lunch-btn {
+        background: rgba(26, 29, 39, 0.8);
+        border-color: rgba(255, 255, 255, 0.1);
+        color: var(--text);
+      }
+
+      .lunch-btn:hover {
+        background: rgba(26, 29, 39, 0.95);
+      }
+    }
+
+    .chat-bubble-inner ul {
+      margin: 6px 0 0 0;
+      padding-left: 18px;
+    }
+
+    .chat-bubble-inner li {
+      margin-bottom: 3px;
+    }
+
+    .chat-bubble-inner strong {
+      font-weight: 700;
+    }
+
+    @media (max-width: 768px) {
+      .chat-wrap {
+        padding: 28px 16px 48px;
+      }
+
+      .chat-bubble {
+        max-width: 85%;
+      }
+    }
+
+    .topbar-logo {
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      color: var(--text);
+    }
+
+    #topbar-track-pill {
+      flex-shrink: 0;
+    }
+
+    /* ── SESSION CONTENT ── */
+    .sess-content-wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+      width: 100%;
+    }
+
+    /* ── OTHER SESSIONS SECTION ── */
+    .other-sessions {
+      border-top: 1px solid var(--border);
+      padding: 48px 24px 80px;
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .other-sessions-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text3);
+      margin-bottom: 16px;
+    }
+
+    .other-sessions-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    /* ── SESSION ARTICLE DETAIL STYLES ── */
+    article.sess-detail {
+      outline: none;
+    }
+
+    .sess-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 5px;
+      margin-bottom: 12px;
+    }
+
+    article.po .sess-badge {
+      background: var(--po-bg);
+      color: var(--po);
+    }
+
+    article.ux .sess-badge {
+      background: var(--ux-bg);
+      color: var(--ux);
+    }
+
+    article.tech .sess-badge {
+      background: var(--tech-bg);
+      color: var(--tech);
+    }
+
+    article.growth .sess-badge {
+      background: var(--growth-bg);
+      color: var(--growth);
+    }
+
+    article.special .sess-badge {
+      background: var(--special-bg);
+      color: var(--special);
+    }
+
+    article.summary .sess-badge {
+      background: var(--summary-bg);
+      color: var(--summary);
+    }
+
+    .sess-num {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text3);
+      margin-bottom: 6px;
+    }
+
+    h2.sess-title {
+      font-size: clamp(22px, 3.5vw, 36px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .sess-lead {
+      font-size: 15px;
+      color: var(--text2);
+      line-height: 1.75;
+      padding: 18px 20px;
+      background: var(--surface);
+      border-radius: var(--r);
+      border-left: 3px solid var(--border);
+      margin-bottom: 40px;
+    }
+
+    article.ux .sess-lead {
+      border-color: var(--ux);
+    }
+
+    article.tech .sess-lead {
+      border-color: var(--tech);
+    }
+
+    article.po .sess-lead {
+      border-color: var(--po);
+    }
+
+    article.growth .sess-lead {
+      border-color: var(--growth);
+    }
+
+    article.special .sess-lead {
+      border-color: var(--special);
+    }
+
+    article.summary .sess-lead {
+      border-color: var(--summary);
+    }
+
+    /* ── CONTENT TYPOGRAPHY ── */
+    .content h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      margin-top: 44px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .content h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
+
+    .content p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .content ul,
+    .content ol {
+      padding-left: 22px;
+      margin-bottom: 14px;
+    }
+
+    .content li {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .content strong {
+      font-weight: 700;
+    }
+
+    .content blockquote {
+      margin: 20px 0;
+      padding: 16px 20px;
+      background: var(--surface);
+      border-left: 4px solid var(--border);
+      border-radius: 0 var(--r) var(--r) 0;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.65;
+      color: var(--text);
+    }
+
+    article.ux .content blockquote {
+      border-color: var(--ux);
+    }
+
+    article.tech .content blockquote {
+      border-color: var(--tech);
+    }
+
+    article.po .content blockquote {
+      border-color: var(--po);
+    }
+
+    article.growth .content blockquote {
+      border-color: var(--growth);
+    }
+
+    article.special .content blockquote {
+      border-color: var(--special);
+    }
+
+    .tbl {
+      overflow-x: auto;
+      margin: 16px 0;
+      border-radius: var(--r);
+      border: 1px solid var(--border);
+    }
+
+    .content table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .content th {
+      background: var(--surface);
+      padding: 10px 14px;
+      text-align: left;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text2);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .content td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      line-height: 1.6;
+      vertical-align: top;
+    }
+
+    .content tr:last-child td {
+      border-bottom: none;
+    }
+
+    .content pre {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 16px 18px;
+      overflow-x: auto;
+      margin: 16px 0;
+    }
+
+    .content code {
+      font-family: 'SF Mono', 'Fira Code', Menlo, monospace;
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--text);
+      white-space: pre-wrap;
+    }
+
+    /* ── INSIGHT LIST ── */
+    .ilist {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0;
+    }
+
+    .ilist li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px 16px;
+      margin-bottom: 8px;
+      background: var(--surface);
+      border-radius: var(--r);
+      border: 1px solid var(--border);
+    }
+
+    .inum {
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 800;
+      color: #fff;
+      margin-top: 1px;
+    }
+
+    article.ux .inum {
+      background: var(--ux);
+    }
+
+    article.tech .inum {
+      background: var(--tech);
+    }
+
+    article.po .inum {
+      background: var(--po);
+    }
+
+    article.growth .inum {
+      background: var(--growth);
+    }
+
+    article.special .inum {
+      background: var(--special);
+    }
+
+    /* ── FINAL SUMMARY ARTICLE ── */
+    article.summary {
+      margin-top: 0;
+      padding: 40px;
+      background: var(--surface);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+    }
+
+    article.summary h2 {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    article.summary .sub {
+      font-size: 14px;
+      color: var(--text3);
+      margin-bottom: 28px;
+    }
+
+    article.summary h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      border: none !important;
+      margin-top: 0 !important;
+      padding: 0 !important;
+    }
+
+    article.summary .ilist .inum {
+      background: #374151;
+    }
+
+    article.summary blockquote {
+      border-left: 4px solid #374151;
+      background: var(--surface2);
+      padding: 18px 22px;
+      border-radius: 0 var(--r) var(--r) 0;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.7;
+      margin-top: 28px;
+    }
+
+    /* ── BACK TO TOP ── */
+    #top-btn {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--text);
+      color: var(--bg);
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.2s, transform 0.2s;
+      z-index: 100;
+    }
+
+    #top-btn.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #top-btn:hover {
+      opacity: 0.8;
+    }
+
+    #top-btn:focus-visible {
+      outline: 2px solid var(--text);
+      outline-offset: 4px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1100px) {
+      .other-sessions-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .hero-shell {
+        padding: 32px 24px 28px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-shell {
+        min-height: auto;
+        padding: 28px 16px;
+      }
+
+      .session-grid,
+      .other-sessions-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .sess-content-wrap {
+        padding: 40px 16px 60px;
+      }
+
+      article.summary {
+        padding: 24px;
+      }
+
+      .hero-footer {
+        padding: 16px 20px;
+      }
+
+      .other-sessions {
+        padding: 36px 16px 60px;
+      }
+
+      #top-btn {
+        bottom: 20px;
+        right: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .session-grid,
+      .other-sessions-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════════
+       HOME VIEW
+  ════════════════════════════════════════════ -->
+  <main id=view-home>
+    <header class=hero-shell>
+      <div class=hero-top>
+        <p class=conf-eyebrow>WANTED HIGH FIVE 2026 · MAKERS DAY</p>
+        <h1 class=conf-title>HIGH FIVE 26</h1>
+        <p class=conf-sub>THE AGE OF EXPANSION : 경계를 허무는 일의 미래 </p>
+        <div class=conf-meta>
+          <span>2026.05.13 (수)</span>
+          <span>COEX 그랜드볼룸 &amp; 오디토리움</span>
+        </div>
+      </div>
+
+      <nav class=grid-wrap aria-label="세션 목록">
+        <div class="grid-header">
+          <a href="#lunch-panel" class="lunch-btn" tabindex="0">[패널 토크 내용보기]</a>
+        </div>
+        <div class="session-grid">
+          <a href="#session-1" class="card po" tabindex="0">
+            <span class="track-pill">PO · PM</span>
+            <p class="card-title">제품과 팀을 변화시키는 AI-powered PM</p>
+            <p class="card-company">카카오스타일 | 이미준</p>
+          </a>
+          <a href="#session-2" class="card growth" tabindex="0">
+            <span class="track-pill">Growth</span>
+            <p class="card-title">생성형 AI 세상에서 살아남기</p>
+            <p class="card-company">미리디 | 신희찬</p>
+          </a>
+          <a href="#session-3" class="card ux" tabindex="0">
+            <span class="track-pill">UX Design</span>
+            <p class="card-title">AI 시대, 지휘자가 된 디자이너</p>
+            <p class="card-company">뱅크샐러드 | 홍성준</p>
+          </a>
+          <a href="#session-4" class="card po" tabindex="0">
+            <span class="track-pill">PO · PM</span>
+            <p class="card-title">Back to the Origin — Vertical 고객 전략</p>
+            <p class="card-company">오늘의집 | 김민수</p>
+          </a>
+          <a href="#session-5" class="card ux" tabindex="0">
+            <span class="track-pill">UX Design</span>
+            <p class="card-title">AI 페르소나, 어떻게 하면 믿을 수 있을까요?</p>
+            <p class="card-company">네이버 | 양희연, 이호동</p>
+          </a>
+          <a href="#session-6" class="card ux" tabindex="0">
+            <span class="track-pill">UX Design</span>
+            <p class="card-title">AI 시대에도 변하지 않는 디자이너의 본질 찾기</p>
+            <p class="card-company">Google | 이정영</p>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+  </main>
+
+  <!-- ════════════════════════════════════════════
+       SESSION DETAIL VIEW
+  ════════════════════════════════════════════ -->
+  <section id="view-session" aria-modal="true" role="dialog" hidden>
+    <div class="modal-box" id="modal-box">
+
+      <!-- modal header -->
+      <div class="modal-header">
+        <span id="topbar-track-pill" class="track-pill" aria-live="polite"></span>
+        <button class="modal-close-btn" id="btn-close" aria-label="닫기">닫기 ✕</button>
+      </div>
+
+      <!-- tabs -->
+      <div class="modal-tabs" id="modal-tabs">
+        <button class="tab-btn active" data-tab="summary">Summary</button>
+        <button class="tab-btn" data-tab="article" id="tab-btn-article">Article</button>
+        <button class="tab-btn" data-tab="chat" id="tab-btn-chat" style="display:none">대화 보기</button>
+      </div>
+
+      <div class="modal-body">
+
+        <!-- ── Summary Tab ── -->
+        <div class="tab-pane active" id="tab-summary">
+          <div class="sess-content-wrap">
+
+            <!-- ══════════ S1 ══════════ -->
+            <article id="detail-session-1" class="sess-detail po" hidden>
+              <span class="sess-badge">PO · PM</span>
+              <p class="sess-num">S1</p>
+              <h2 class="sess-title">제품과 팀을 변화시키는 AI-powered PM</h2>
+              <div class="sess-lead">
+                <strong>AI를 보조 도구로 쓰는 수준이 아니라, 팀 전체의 업무 구조와 사고방식을 AI 중심으로 재설계해야 생산성이 폭발적으로 올라간다.</strong>
+              </div>
+
+              <div class="content">
+                <h3>01 | 프로젝트 배경: Piyonna (카카오스타일)</h3>
+                <h4>상황</h4>
+                <ul>
+                  <li>신규 비즈니스: 프랑스향 뷰티 커머스 'Piyonna' 구축</li>
+                  <li>제약 사항: 부족한 일정과 리소스 환경</li>
+                  <li>글로벌 리스크: 과거 로컬라이제이션 실패 경험을 바탕으로, AI 리서치와 현지인 채용 결합</li>
+                </ul>
+                <h4>결론</h4>
+                <blockquote>"100% AI 활용을 전제로 팀 운영 방식을 바꾸자"</blockquote>
+
+                <h3>02 | 최초 업무 프로토콜 설계 (-1월 킥오프 전)</h3>
+                <div class="tbl">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>영역</th>
+                        <th>설명</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>프론트엔드</strong></td>
+                        <td>Shopify 적극 활용하여 구축 속도 향상</td>
+                      </tr>
+                      <tr>
+                        <td><strong>백엔드</strong></td>
+                        <td>정책 및 화면 설계 중심의 2태스크 구조</td>
+                      </tr>
+                      <tr>
+                        <td><strong>PRD 작성</strong></td>
+                        <td>Claude → Markdown 변환 → 개발 단계로 직결</td>
+                      </tr>
+                      <tr>
+                        <td><strong>화면 설계</strong></td>
+                        <td>Figma Make의 수정 불가 한계 극복 위해 Miro 도입</td>
+                      </tr>
+                      <tr>
+                        <td><strong>전시화면 프로토콜</strong></td>
+                        <td>별도 정밀 설계 진행</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h3>03 | 일하는 방식의 분기점 (2026.02.06)</h3>
+                <h4>Claude Opus 4.6 출시의 의미</h4>
+                <p>AI가 단순 실험 수준을 넘어 실무의 핵심 동력으로 자리 잡은 기점</p>
+                <h4>변화된 업무 양상</h4>
+                <div class="tbl">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>항목</th>
+                        <th>변화</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>1인 다역</strong></td>
+                        <td>소수의 인력이 AI를 활용해 일당백의 업무 수행</td>
+                      </tr>
+                      <tr>
+                        <td><strong>디자인 QA</strong></td>
+                        <td>Claude를 활용한 Test Case 생성 및 사후 문서 관리 자동화</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Figma 우회</strong></td>
+                        <td>Claude가 PRD(md)를 읽고 직접 HTML 샘플 생성 → 개발자 전달</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Code Analysis</strong></td>
+                        <td>Git 소스코드를 Claude(Git MCP)에 연결하여 데이터 흐름 실시간 확인</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h3>04 | AI-Powered PM의 사고방식</h3>
+                <h4>인재상 변화</h4>
+                <ul>
+                  <li>Ego가 없으며 기존 프로토콜에 얽매이지 않음</li>
+                  <li>업무의 시작점을 다르게 정의할 줄 아는 인재</li>
+                </ul>
+                <h4>결정의 무게</h4>
+                <ul>
+                  <li>저비용·고속 생산의 시대일수록</li>
+                  <li>'무엇이 중요한가'에 대한 명확한 기준과 결정력이 핵심</li>
+                </ul>
+                <h4>루프 설계</h4>
+                <ul>
+                  <li>'생산-검증'의 반복 루프를 통해 불필요한 커뮤니케이션 버퍼 제거</li>
+                </ul>
+
+                <h3>05 | 핵심 메시지 정리</h3>
+                <ul class="ilist">
+                  <li><span class="inum">①</span>
+                    <div><strong>AI는 단순 자동화 툴이 아니다</strong> — 팀 구조와 역할 자체를 바꾸고 있음</div>
+                  </li>
+                  <li><span class="inum">②</span>
+                    <div><strong>PM/PO 역할이 더 강력해진다</strong> — 데이터 직접 분석 → 대시보드 제작 → 로직 검증까지 가능</div>
+                  </li>
+                  <li><span class="inum">③</span>
+                    <div><strong>직무 경계가 흐려진다</strong> — 모두가 프로덕트 빌더가 되는 흐름</div>
+                  </li>
+                  <li><span class="inum">④</span>
+                    <div><strong>"레거시 사고방식"이 가장 큰 장애물</strong> — 기존 프로세스에 AI를 끼워 넣는 것만으로는 한계</div>
+                  </li>
+                  <li><span class="inum">⑤</span>
+                    <div>
+                      <strong>앞으로 중요한 건</strong>
+                      <blockquote>"AI를 쓰는 사람"이 아니라 "AI 기반으로 문제를 다시 정의하는 사람"</blockquote>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- ══════════ S2 ══════════ -->
+            <article id="detail-session-2" class="sess-detail growth" hidden>
+              <span class="sess-badge">Growth</span>
+              <p class="sess-num">S2</p>
+              <h2 class="sess-title">생성형 AI 세상에서 살아남기</h2>
+              <div class="sess-lead">
+                <strong>AI 시대에 프로덕트의 핵심 가치가 흔들릴 때, 다시 정의하고 타겟 유저에게 집중해야 생존한다.</strong>
+              </div>
+
+              <div class="content">
+                <h3>01 | 초기 문제 정의: Miridi (미리디)</h3>
+                <h4>상황</h4>
+                <ul>
+                  <li>디자인 비전문가들의 '시작의 어려움'과 '툴 숙련도 부족' 해결</li>
+                  <li>AI 디자인 툴의 등장으로 기존 핵심 가치가 흔들림</li>
+                  <li>프로덕트 재정의 필요</li>
+                </ul>
+                <h4>핵심 깨달음</h4>
+                <blockquote>"고객이 다시 찾아오는 것에 가치를 높여야 한다"</blockquote>
+
+                <h3>02 | 가설 수립 및 검증 흐름</h3>
+                <h4>가설 1: AI로 디자인 초안을 제공하면 유저 지표가 상승할 것</h4>
+                <ul>
+                  <li>결과: 템플릿 선택 및 편집 시간이 획기적으로 단축 → 가설 검증 성공</li>
+                </ul>
+                <h4>가설 2: 초안 이후의 편집 과정을 자동화해보자</h4>
+                <ul>
+                  <li>결과: '딱 맞는 페이지 찾기' 기능 및 AI 기능 모음 '미리클' 출시</li>
+                </ul>
+                <h4>핵심 인사이트</h4>
+                <blockquote>"사용자는 단순히 '쉽게 만드는 것'을 넘어 '원하는 결과물을 쉽게 얻는 것'을 원함"</blockquote>
+
+                <h3>03 | 유입 vs 리텐션: 데이터가 말하는 것</h3>
+                <h4>변화 전: 유입 중심</h4>
+                <ul>
+                  <li>여러 기능 + 모두가 잘 쓸 수 있도록 설계</li>
+                  <li>일평균 회원가입 수: 100명 미만</li>
+                  <li>문제: 유입만 만들고 지속적으로 사용하지 않음</li>
+                </ul>
+                <h4>PMF 달성을 위한 핵심 발견</h4>
+                <pre><code>다시 돌아오는 사람들의 특징:
+- 가입당일 생성 요청: 3회 이상
+- 가입당일 다양한 기능 사용: 2개 이상
+  (예: 아이콘 만들기 + 아이콘 움직이게 하기)</code></pre>
+
+                <h3>04 | 타깃 유저 집중의 효과</h3>
+                <h4>변화 후: 타깃 유저 집중 전략</h4>
+                <ul>
+                  <li>다운로드 리텐션이 가장 높은 소상공인에게 먼저 노출</li>
+                  <li>회원가입 수: 700명 이상으로 증가 (7배 증가!)</li>
+                </ul>
+                <h4>핵심 교훈</h4>
+                <blockquote>"모두가 잘 쓸 수 있는 프로덕트 → 타깃 유저가 잘 쓸 수 있는 프로덕트"</blockquote>
+
+                <h3>05 | 5가지 인사이트</h3>
+                <ul class="ilist">
+                  <li><span class="inum">1</span>
+                    <div><strong>명확한 타깃 설정이 우선</strong> — AI 프로덕트는 높은 성능보다 명확한 타깃이 더 중요</div>
+                  </li>
+                  <li><span class="inum">2</span>
+                    <div><strong>리텐션이 핵심</strong> — 유입(MAU)은 허영 지표, 지속 가능한 리텐션이 생존의 핵심</div>
+                  </li>
+                  <li><span class="inum">3</span>
+                    <div><strong>데이터는 방향만 알려줄 뿐</strong> — 진짜 이유는 사용자의 목소리(VOICE)에 있음</div>
+                  </li>
+                  <li><span class="inum">4</span>
+                    <div><strong>의도치 않은 사용법에서 답을 찾기</strong> — 예: 기존 포스터 리디자인 같은 예상 밖의 사용법에서 핵심 기능 발견</div>
+                  </li>
+                  <li><span class="inum">5</span>
+                    <div><strong>AI가 발전할수록 깊이가 승리</strong> — 사용자 문제에 더 깊이 파고드는 프로덕트가 승리함</div>
+                  </li>
+                </ul>
+
+                <h3>06 | 핵심 메시지 정리</h3>
+                <ul class="ilist">
+                  <li><span class="inum">①</span>
+                    <div><strong>AI 시대의 경쟁력 변화</strong> — 기술 &gt; 사용자 경험으로 이동</div>
+                  </li>
+                  <li><span class="inum">②</span>
+                    <div><strong>유입이 아닌 리텐션 집중</strong> — 한 번의 방문 &gt; 반복적 사용</div>
+                  </li>
+                  <li><span class="inum">③</span>
+                    <div><strong>타깃 유저 명확화</strong> — 모두를 위한 제품 &lt; 누군가를 위한 제품</div>
+                  </li>
+                  <li><span class="inum">④</span>
+                    <div><strong>사용자 행동 관찰 중심</strong> — 가입당일 행동 패턴이 미래를 결정함</div>
+                  </li>
+                  <li><span class="inum">⑤</span>
+                    <div>
+                      <strong>성공 경험의 설계</strong>
+                      <blockquote>"첫 성공 &gt; 다음 행동"의 선순환 구조</blockquote>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- ══════════ S3 ══════════ -->
+            <article id="detail-session-3" class="sess-detail ux" hidden>
+              <span class="sess-badge">UX Design</span>
+              <p class="sess-num">S3</p>
+              <h2 class="sess-title">AI 시대, 지휘자가 된 디자이너</h2>
+              <div class="sess-lead">
+                <strong>기술의 언어를 경험의 언어로 번역하는 디자이너의 역할 — 뱅크샐러드 사례</strong>
+              </div>
+
+              <div class="content">
+                <h3>01 | AI 도구 활용 실무</h3>
+                <h4>팀 차원의 효율화</h4>
+                <ul>
+                  <li>CUJ 시뮬레이터 구축</li>
+                  <li>VOC 통합 대시보드 구축</li>
+                  <li>에너지 소모 최소화</li>
+                </ul>
+                <h4>협업의 복잡성</h4>
+                <ul>
+                  <li>직무 간 협업 사이에 다수의 AI 에이전트가 개입</li>
+                  <li>레이어 구조 형성</li>
+                </ul>
+
+                <h3>02 | 기술 vs 사람: 패러독스</h3>
+                <h4>생산성과 감정의 역설</h4>
+                <div class="tbl">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>지표</th>
+                        <th>개선</th>
+                        <th>결과</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>생산성</strong></td>
+                        <td>66% 향상</td>
+                        <td>—</td>
+                      </tr>
+                      <tr>
+                        <td><strong>속도</strong></td>
+                        <td>82% 향상</td>
+                        <td>—</td>
+                      </tr>
+                      <tr>
+                        <td><strong>사람과 일하고 싶은 니즈</strong></td>
+                        <td>—</td>
+                        <td>여전히 높음</td>
+                      </tr>
+                      <tr>
+                        <td><strong>NPS 갭</strong></td>
+                        <td>—</td>
+                        <td>72pt</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <h4>핵심 발견</h4>
+                <blockquote>기술 개선이 모든 것을 해결하지는 못함</blockquote>
+
+                <h3>03 | 경험 설계의 본질</h3>
+                <h4>주인공은 사용자</h4>
+                <ul>
+                  <li>구글 어시스턴트 초기 사례처럼 기술 과시가 아닌</li>
+                  <li>사용자의 일상을 돕는 순간에 집중해야 함</li>
+                </ul>
+                <h4>의도적 마찰의 가치</h4>
+                <ul>
+                  <li>극단의 효율 시대에 '노동의 환상(과정 노출)'</li>
+                  <li>의도적인 멈춤 설계가 필요할 수 있음</li>
+                </ul>
+
+                <h3>04 | 변함없이 중요한 가치</h3>
+                <h4>Human in the Loop</h4>
+                <ul>
+                  <li>시작과 끝은 항상 사람이어야 함</li>
+                </ul>
+                <h4>Taste (안목)</h4>
+                <ul>
+                  <li>수많은 결과물 중 최선의 것을 선별하고 선택하는 능력</li>
+                  <li>디자이너의 감각이 Great 20%를 결정함</li>
+                </ul>
+
+                <h3>05 | 핵심 메시지 정리</h3>
+                <ul class="ilist">
+                  <li><span class="inum">①</span>
+                    <div><strong>효율성 ≠ 만족도</strong></div>
+                  </li>
+                  <li><span class="inum">②</span>
+                    <div><strong>기술은 수단, 경험은 목적</strong></div>
+                  </li>
+                  <li><span class="inum">③</span>
+                    <div><strong>AI 활용도가 높을수록 사람의 역할이 중요해짐</strong></div>
+                  </li>
+                  <li><span class="inum">④</span>
+                    <div><strong>감정과 신뢰는 자동화할 수 없음</strong></div>
+                  </li>
+                  <li><span class="inum">⑤</span>
+                    <div><strong>"지휘자"로서의 디자이너 역할 강화</strong></div>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- ══════════ S4 ══════════ -->
+            <article id="detail-session-4" class="sess-detail po" hidden>
+              <span class="sess-badge">PO · PM</span>
+              <p class="sess-num">S4</p>
+              <h2 class="sess-title">Back to the Origin — Vertical 고객 전략</h2>
+              <div class="sess-lead">
+                <strong>기술이 아닌 '고객'과 '문제'에 집중하는 버티컬 전략 — 이사 시장의 재해석 (오늘의집 사례)</strong>
+              </div>
+
+              <div class="content">
+                <h3>01 | 핵심 유저 발굴: 이사 고객</h3>
+                <h4>데이터 분석</h4>
+                <ul>
+                  <li>가입 후 2년 주기로 구매 지표가 반등</li>
+                  <li>패턴 발견: '전월세 만료 및 이사 시점'이 핵심 모멘텀</li>
+                </ul>
+                <h4>시장 기회</h4>
+                <ul>
+                  <li>전체 이사 시장 규모 대비 오늘의집 점유율: 10% 수준</li>
+                  <li>문제 해결의 여지가 큼을 확인</li>
+                </ul>
+
+                <h3>02 | 이사 여정 기반 UX 제안</h3>
+                <h4>적시성 (Timely)</h4>
+                <ul>
+                  <li>이사 D-Day 기준 3개월 전, 1개월 전 등 시기별 필요한 태스크와 상품을 맵핑하여 제안</li>
+                </ul>
+                <h4>개인화</h4>
+                <ul>
+                  <li>예산별 3단계 구분</li>
+                  <li>주거 유형, 관심사 정보를 활용한 개인화 메시지 발송</li>
+                </ul>
+                <h4>리텐션 전략</h4>
+                <ul>
+                  <li>이사 종료 후에도 꾸미기 유도 (M+1)</li>
+                  <li>락인 프로그램 (M+2)</li>
+                  <li>복귀 전략 (Y+n)</li>
+                  <li>생애주기 관리</li>
+                </ul>
+
+                <h3>03 | 핵심 교훈</h3>
+                <h4>기술은 도구, 고객은 목적</h4>
+                <ul>
+                  <li>AI나 신기술의 도입이 아니라</li>
+                  <li>고객의 실제 문제와 여정에 집중</li>
+                </ul>
+                <h4>패턴 발견 → 서비스 설계</h4>
+                <ul>
+                  <li>데이터 분석을 통해 고객의 숨겨진 니즈 발견</li>
+                  <li>그것을 중심으로 UX 설계</li>
+                </ul>
+                <h4>생애주기 관리의 중요성</h4>
+                <ul>
+                  <li>한 번의 트랜잭션이 아닌 장기적 고객 관계 설계</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- ══════════ S5 ══════════ -->
+            <article id="detail-session-5" class="sess-detail ux" hidden>
+              <span class="sess-badge">UX Design</span>
+              <p class="sess-num">S5</p>
+              <h2 class="sess-title">AI 페르소나, 어떻게 하면 믿을 수 있을까요?</h2>
+              <div class="sess-lead">
+                <strong>AI 협업 도구의 신뢰도를 정량적으로 검증하고, 실무 협업에서 실제로 쓸 수 있는 AI를 만드는 것이 핵심이다. (앤소나 사례)</strong>
+              </div>
+
+              <div class="content">
+                <h3>01 | 프로젝트 배경: Nsona (앤소나)</h3>
+                <h4>초기 목표</h4>
+                <ul>
+                  <li>UX 페르소나를 AI에 주입해 실제 사람처럼 대화하는 AI 페르소나 개발</li>
+                  <li>UX 리서치 과정에서 실제 사용자를 대신해 인터뷰 수행</li>
+                </ul>
+                <h4>방향성 변경</h4>
+                <ul>
+                  <li>실무자들이 AI를 단순 "사용자 대체재"가 아닌 "협업하는 동료"처럼 인식</li>
+                  <li>요구사항 확장: PM, 디자이너, 개발자 등 "동료 AI"도 제작 원함</li>
+                </ul>
+
+                <h3>02 | 가장 큰 문제: 신뢰도 측정의 부재</h3>
+                <h4>문제 상황</h4>
+                <pre><code>AI가 그럴듯하게 말하는데,
+실제 업무에 믿고 써도 되는가?</code></pre>
+                <h4>기존 접근의 한계</h4>
+                <ul>
+                  <li>"참고용으로만 쓰세요" → 의미 부족</li>
+                  <li>"메타 테스트 용도입니다" → 실무 기여도 낮음</li>
+                </ul>
+                <h4>새로운 접근</h4>
+                <blockquote>"AI 신뢰도를 측정 가능한 구조로 만들자"</blockquote>
+
+                <h3>03 | AI 협업 품질 평가 2가지 축</h3>
+                <h4>(1) 개별 발화의 신뢰성 평가</h4>
+                <p>AI 한 명의 말이 얼마나 믿을 만한가?</p>
+                <p>평가 기준:</p>
+                <ul>
+                  <li>논리적인가?</li>
+                  <li>일관성 있는가?</li>
+                  <li>쉽게 말 바꾸지 않는가?</li>
+                  <li>전문성이 있는가?</li>
+                  <li>비판적 사고가 가능한가?</li>
+                </ul>
+                <h4>(2) 전체 대화의 효과성 평가</h4>
+                <p>AI 여러 명이 함께 협업할 때, 실제로 팀의 집단지성을 발전시키는가?</p>
+                <p>평가 기준:</p>
+                <ul>
+                  <li>회의 품질이 좋아지는가?</li>
+                  <li>아이디어가 발전하는가?</li>
+                  <li>합의가 잘 되는가?</li>
+                  <li>비평 수준이 올라가는가?</li>
+                </ul>
+
+                <h3>04 | 신뢰 측정 파이프라인</h3>
+                <h4>루브릭(Rubric) 설정</h4>
+                <p><strong>Stage 1 (단일 발화)</strong></p>
+                <ul>
+                  <li>능력, 도움 의지, 일관성 등 협업 태도 평가</li>
+                  <li>6개 루브릭</li>
+                </ul>
+                <p><strong>Stage 2 (멀티 대화)</strong></p>
+                <ul>
+                  <li>점진적 집단 지성의 변화 및 효과성 평가</li>
+                  <li>5개 루브릭</li>
+                </ul>
+                <h4>평가 방법</h4>
+                <p>평가대상(퍼소나) — 평가기준(루브릭) — 평가방법(LLM as a Judge)</p>
+
+                <h3>05 | 사례: "말은 길지만 발전은 없는 AI"</h3>
+                <h4>문제 상황</h4>
+                <ul>
+                  <li>AI 개발자 페르소나가 회의 중 길게 이야기</li>
+                  <li>하지만 사실 이전 내용을 반복만 함</li>
+                  <li>표현만 바뀌었을 뿐, 새로운 통찰 없음</li>
+                </ul>
+                <h4>평가 결과</h4>
+                <blockquote>"집단지성을 저하시킨다" → 낮은 점수 부여</blockquote>
+                <h4>핵심 인사이트</h4>
+                <ul>
+                  <li>단순 "문장 퀄리티" 평가가 아닌</li>
+                  <li><strong>팀 전체의 사고 발전 기여도</strong>를 본다</li>
+                </ul>
+
+                <h3>06 | 신뢰의 정의: 조직심리학 기반</h3>
+                <h4>사람이 동료를 신뢰하는 3가지 기준</h4>
+                <div class="tbl">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>기준</th>
+                        <th>설명</th>
+                        <th>예시</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>Ability (능력)</strong></td>
+                        <td>일을 잘하는가?</td>
+                        <td>전문적인 답변, 문제 해결력</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Benevolence (호의성)</strong></td>
+                        <td>나를 돕고 협력하려 하는가?</td>
+                        <td>팀 목표 중심, 함께하려는 태도</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Integrity (일관성)</strong></td>
+                        <td>태도가 일관적인가?</td>
+                        <td>원칙 유지, 신뢰할 수 있는 행동</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p><strong>AI에도 동일하게 적용됨</strong></p>
+
+                <h3>07 | 특이한 평가 항목: "건설적 비동조성"</h3>
+                <h4>문제 상황</h4>
+                <ul>
+                  <li>LLM은 사용자가 강하게 말하면 쉽게 의견 변경</li>
+                  <li>과도하게 동조하는 경향</li>
+                </ul>
+                <blockquote>이것은 신뢰 하락 요소로 판단</blockquote>
+                <h4>좋은 AI의 특징</h4>
+                <ul>
+                  <li>무조건 맞장구치지 않음</li>
+                  <li>논리적으로 반박 가능</li>
+                  <li>의견 변경도 점진적·합리적으로</li>
+                </ul>
+                <h4>핵심</h4>
+                <pre><code>"예스맨 AI" &lt; "건설적으로 반대할 줄 아는 AI"</code></pre>
+
+                <h3>08 | 가장 놀라운 발견: AI가 가장 못하는 것</h3>
+                <p><strong>예상</strong>: 창의적 브레인스토밍, 비평</p>
+                <p><strong>실제 결과</strong>: <strong>"합의형 대화"</strong></p>
+                <pre><code>AI가 약한 영역:
+- 서로 다른 의견 조율
+- 설득
+- 타협
+- 관점 통합</code></pre>
+                <h4>원인 분석</h4>
+                <ul>
+                  <li>LLM이 사용자 요구에 순응하도록 학습됨</li>
+                  <li>AI는 "사용자 만족"에는 강함</li>
+                  <li>하지만 "건강한 갈등 조율"에는 약함</li>
+                </ul>
+
+                <h3>09 | 개인 비서 AI ≠ 팀원 AI</h3>
+                <h4>중요한 구분</h4>
+                <pre><code>개별 발화 품질이 비슷해 보여도,
+팀 대화 품질에서는 모델별 차이가 크다</code></pre>
+                <h4>의미</h4>
+                <ul>
+                  <li>혼자 잘 답하는 AI ≠ 협업 잘하는 AI</li>
+                  <li>두 가지는 다른 문제</li>
+                </ul>
+
+                <h3>10 | 페르소나에 따라 달라지는 AI 성향</h3>
+                <h4>공감 중심 디자이너 페르소나</h4>
+                <ul>
+                  <li>✓ 창의적 대화 강함</li>
+                  <li>✗ 합의/결정 약함</li>
+                </ul>
+                <h4>서비스 기획자 페르소나</h4>
+                <ul>
+                  <li>✓ 정보 정리, 빠른 판단 강함</li>
+                  <li>✓ 명확한 결론 도출 유리</li>
+                </ul>
+                <h4>핵심</h4>
+                <blockquote>"AI도 '캐릭터 설계'에 따라 팀 역할이 달라진다"</blockquote>
+                <p><strong>Who, What, How</strong> — 퍼소나의 역할 정의가 신뢰의 시작</p>
+
+                <h3>11 | 핵심 메시지 정리</h3>
+                <ul class="ilist">
+                  <li><span class="inum">①</span>
+                    <div><strong>AI 신뢰도는 측정 가능해야 한다</strong> — 단순 "좋다/나쁘다"가 아닌 정량화</div>
+                  </li>
+                  <li><span class="inum">②</span>
+                    <div><strong>개별 능력 + 협업 능력 동시 평가</strong> — 혼자 잘한다 ≠ 팀에 좋다</div>
+                  </li>
+                  <li><span class="inum">③</span>
+                    <div><strong>"예스맨"이 아닌 "비판적 협력자"</strong> — 건설적 반대 가능성이 신뢰의 증거</div>
+                  </li>
+                  <li><span class="inum">④</span>
+                    <div><strong>약점 인정이 강점</strong> — "AI는 합의에 약하다"는 인정이 신뢰 구축</div>
+                  </li>
+                  <li><span class="inum">⑤</span>
+                    <div>
+                      <strong>페르소나 설계가 중요</strong>
+                      <blockquote>"어떤 AI를 만드는가?" 자체가 팀 성과에 영향</blockquote>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- ══════════ S6 ══════════ -->
+            <article id="detail-session-6" class="sess-detail ux" hidden>
+              <span class="sess-badge">UX Design</span>
+              <p class="sess-num">S6</p>
+              <h2 class="sess-title">AI 시대에도 변하지 않는 디자이너의 본질 찾기</h2>
+              <div class="sess-lead">
+                <strong>AI 도구는 빠르게 변하지만, 결국 중요한 것은 "오랫동안 살아남는 디자이너 정체성"이다.</strong>
+              </div>
+
+              <div class="content">
+                <h3>01 | 핵심 질문: 60살이 되어도 남는 것은?</h3>
+                <h4>연사의 질문</h4>
+                <blockquote>"60살이 되었을 때도 나는 어떤 디자이너로 남아 있을까?"</blockquote>
+                <h4>시대와 무관한 근본 질문</h4>
+                <ul>
+                  <li>30년짜리 커리어를 기준으로 생각하기</li>
+                  <li>새로운 툴을 빠르게 따라가는 것이 아닌</li>
+                  <li>AI 환경 안에서 자신의 감각과 관점을 키우는 것</li>
+                </ul>
+
+                <h3>02 | 두 가지 디자이너 자아</h3>
+                <h4>(1) 직업인으로서의 디자이너</h4>
+                <ul>
+                  <li>회사 역할, KPI, 성장 지표</li>
+                  <li>프로덕트 성과, 조직이 요구하는 역할</li>
+                  <li><strong>회사 안에서의 기능적 역할</strong></li>
+                </ul>
+                <h4>(2) 존재로서의 디자이너</h4>
+                <ul>
+                  <li>내가 좋아하는 감각</li>
+                  <li>내가 끌리는 스타일</li>
+                  <li>나만의 시선, 오래 지속되는 취향과 철학</li>
+                  <li><strong>회사 밖에서도 남는 "나 자체"</strong></li>
+                </ul>
+                <h4>연사의 강조</h4>
+                <blockquote>장기적으로 중요한 것은 두 번째다</blockquote>
+
+                <h3>03 | 회사 JD ≠ 나의 전부</h3>
+                <h4>흔한 실수</h4>
+                <ul>
+                  <li>직무기술서(JD) 안에서만 자신을 정의</li>
+                  <li>회사 역할 = 내 가치 동일시</li>
+                  <li>조직 요구사항을 전부라고 생각</li>
+                </ul>
+                <h4>실제 사실</h4>
+                <blockquote>사람마다 훨씬 더 넓은 가능성과 관심사가 있다</blockquote>
+                <h4>발견 신호: "일인데도 일이 아닌 것처럼 몰입되는 순간"</h4>
+                <p>예시:</p>
+                <ul>
+                  <li>누가 시키지 않았는데 계속 하게 되는 작업</li>
+                  <li>밤새도 재미있는 프로젝트</li>
+                  <li>성과보다 재미가 먼저인 작업</li>
+                </ul>
+                <h4>의미</h4>
+                <blockquote>이런 경험이 자신의 "진짜 디자인 방향성"을 알려준다</blockquote>
+
+                <h3>04 | 사이드 프로젝트는 정체성 실험실</h3>
+                <h4>예시들</h4>
+                <ul>
+                  <li>디자인 커뮤니티 운영</li>
+                  <li>팟캐스트 진행</li>
+                  <li>콘텐츠 큐레이션</li>
+                  <li>인터뷰 플랫폼 제작</li>
+                  <li>브랜딩 실험</li>
+                </ul>
+                <h4>흥미로운 발견</h4>
+                <ul>
+                  <li>회사 프로젝트보다 더 큰 반응을 얻기도 함</li>
+                  <li>"내가 어떤 사람인지" 발견</li>
+                  <li>"무엇에 끌리는지" 파악</li>
+                  <li>"어떤 방식으로 표현하고 싶은지" 확인</li>
+                </ul>
+                <h4>핵심</h4>
+                <blockquote>사이드 프로젝트는 정체성 발견의 통로</blockquote>
+
+                <h3>05 | 디자이너의 미래: 아티스트화</h3>
+                <h4>상황 변화</h4>
+                <ul>
+                  <li>AI 시대에는 결과물의 퀄리티 차이가 점점 줄어들 가능성 높음</li>
+                </ul>
+                <h4>결과</h4>
+                <pre><code>"무엇을 만들었는가" &gt; "누가 만들었는가"로 역전</code></pre>
+                <h4>경쟁력의 변화</h4>
+                <p>개인의 관점 · 취향 · 세계관 · 문제를 바라보는 태도 자체가 경쟁력이 됨</p>
+
+                <h3>06 | Surfer on the Wave: AI 시대의 디자이너</h3>
+                <h4>핵심 메타포</h4>
+                <blockquote>AI라는 거대한 파도 위에서 서퍼로서 살아남는 법은 바다(실무)에서 더 많은 시간을 보내는 것</blockquote>
+                <h4>Being vs Job</h4>
+                <ul>
+                  <li>도구적인 타이틀에 매몰되지 않기</li>
+                  <li>나만의 안목과 정체성을 가진 '디자이너'라는 본연의 존재로 남기</li>
+                </ul>
+                <h4>결론</h4>
+                <blockquote>이것은 AI에 관한 이야기가 아니라, 결국 <strong>사람과 디자인의 본질</strong>에 관한 이야기</blockquote>
+
+                <h3>07 | 인상 깊은 문장들</h3>
+                <ul>
+                  <li>"60살이 되어도 링크드인이 살아있는 디자이너가 되고 싶다"</li>
+                  <li>"회사 역할은 내 디자인 역량의 전부가 아니다"</li>
+                  <li>"완성된 디자인이라는 게 존재할까?"</li>
+                  <li>"디자이너는 미래에 더 아티스트를 닮아갈 것이다"</li>
+                  <li>"가장 개인적인 디자인이 가장 오래 남는다"</li>
+                </ul>
+
+                <h3>08 | Q&amp;A</h3>
+                <h4>Q1. 디자이너의 영역은 어디까지인가?</h4>
+                <p><strong>상황</strong></p>
+                <ul>
+                  <li>산업디자인, 앱 제작, AI 활용 등 영역 확장 중</li>
+                </ul>
+                <p><strong>답변 요약</strong></p>
+                <ul>
+                  <li>경계는 앞으로 더 넓어질 것</li>
+                  <li>중요한 건: "이게 디자이너 일인가?" 아니라 <strong>"나는 사용자와 제품에 어떤 기여를 할 수 있나?"</strong></li>
+                </ul>
+                <p><strong>AI 시대의 변화</strong></p>
+                <pre><code>PM도 디자인을 하고
+디자이너도 제품을 만들고
+모두가 프로덕트 빌더가 되는 흐름</code></pre>
+                <p><strong>핵심 포인트</strong></p>
+                <ul>
+                  <li>영역의 경계는 점점 흐려진다</li>
+                  <li>중요한 건 툴보다 문제 해결 능력</li>
+                  <li>적극적으로 만들어보며 방향을 찾는 것 중요</li>
+                </ul>
+
+                <h4>Q2. 사이드 프로젝트를 꾸준히 할 수 있는 팁</h4>
+                <p><strong>① "가슴 뛰는 프로젝트"를 해야 한다</strong></p>
+                <ul>
+                  <li>억지로 하는 프로젝트는 오래 못 감</li>
+                  <li>정말 재미있는 프로젝트는 밤잠 줄여서라도 함</li>
+                  <li><strong>사이드 프로젝트는 "의무"보다 "흥분"이 중요</strong></li>
+                </ul>
+                <p><strong>② 혼자보다 함께 하는 게 좋다</strong></p>
+                <ul>
+                  <li>친구들과 대화하다가 아이디어 → 프로젝트 → 콘텐츠 → 플랫폼</li>
+                  <li>함께하면 동기부여 생김</li>
+                  <li>서로 자극받으며 지속 가능성 높아짐</li>
+                </ul>
+                <p><strong>핵심 포인트</strong></p>
+                <ul>
+                  <li>억지 프로젝트는 오래 못 간다</li>
+                  <li>진짜 재미있는 걸 해야 지속된다</li>
+                  <li>같이 할 사람을 만드는 게 큰 힘</li>
+                </ul>
+
+                <h3>09 | 핵심 메시지 정리</h3>
+                <ul class="ilist">
+                  <li><span class="inum">①</span>
+                    <div><strong>도구는 변하지만 정체성이 남는다</strong> — 30년 커리어 시각으로 생각하기</div>
+                  </li>
+                  <li><span class="inum">②</span>
+                    <div><strong>회사 역할 ≠ 나의 전부</strong> — JD 밖의 가능성 발견 필요</div>
+                  </li>
+                  <li><span class="inum">③</span>
+                    <div><strong>"일이 아닌 것처럼 몰입"이 신호</strong> — 누가 시키지 않았는데 계속 하는 것 = 진짜 방향성</div>
+                  </li>
+                  <li><span class="inum">④</span>
+                    <div><strong>사이드 프로젝트는 정체성 실험실</strong> — 회사 밖에서 나를 정의하기</div>
+                  </li>
+                  <li><span class="inum">⑤</span>
+                    <div>
+                      <strong>미래는 아티스트화</strong>
+                      <pre style="margin-top: 8px;"><code>"무엇을 만들었는가" → "누가 만들었는가"로 이동</code></pre>
+                    </div>
+                  </li>
+                  <li><span class="inum">⑥</span>
+                    <div><strong>가장 개인적인 디자인이 가장 오래 남는다</strong></div>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- ══════════ LUNCH PANEL ══════════ -->
+            <article id="detail-lunch-panel" class="sess-detail special" hidden>
+              <span class="sess-badge">런치 패널 토크</span>
+              <p class="sess-num">별첨</p>
+              <h2 class="sess-title">런치 패널 토크 — 현장 토론 풀버전</h2>
+              <div class="sess-lead">
+                <strong>AI 시대의 업무 변화와 직무 역량에 관한 패널 토론 — 실전 인사이트</strong>
+              </div>
+
+              <div class="content">
+                <h3>01 | AI 시대의 업무 변화</h3>
+                <h4>변화된 일하는 방식</h4>
+                <div class="tbl">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>관점</th>
+                        <th>변화 내용</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>시간 활용</strong></td>
+                        <td>반복 업무 감소 → 문제 정의에 더 집중 가능</td>
+                      </tr>
+                      <tr>
+                        <td><strong>업무 방식</strong></td>
+                        <td>디스커버리/분석 시간 단축 → 깊이 있는 고민 가능</td>
+                      </tr>
+                      <tr>
+                        <td><strong>도구 활용</strong></td>
+                        <td>AI 툴로 시뮬레이션, 시나리오 분석 등 추가 작업 가능</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <h4>핵심 인사이트</h4>
+                <blockquote>"기술 대행사(outsourcing)가 아닌 기술 활용(leverage)으로의 전환"</blockquote>
+
+                <h3>02 | AI 시대 주니어 인재 육성</h3>
+                <h4>"키워야 할 역량" (우선순위)</h4>
+                <ol>
+                  <li><strong>문제를 작게 자르기</strong> — 대형 과제를 분해하는 능력</li>
+                  <li><strong>좋은 질문 습관</strong> — 모르는 것을 빠르게 파악하고 물어보기</li>
+                  <li><strong>기초(Fundamental) 중심</strong> — 트렌드 추적이 아닌 근본 이해</li>
+                </ol>
+                <h4>"줄여도 되는 역량"</h4>
+                <ul>
+                  <li>트렌드 따라가기 (OpenAI, LMS 에이전트 등 변화 속도 빨라 쓸모 없음)</li>
+                  <li>각 도구별 세부 스킬 (AI가 빠르게 커버함)</li>
+                </ul>
+                <h4>주니어의 강점 + 시니어의 기초 = 폭발적 성장</h4>
+                <ul>
+                  <li>주니어: AI 도구에 이미 적응, 생성 능력 탁월</li>
+                  <li>보완 필요: 실제 구축 경험, 설계 기초, 본인 스타일 확립</li>
+                </ul>
+
+                <h3>03 | 리더의 AI 활용 역량 관리</h3>
+                <h4>팀원 불안감 해소 전략</h4>
+                <div class="tbl">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>전략</th>
+                        <th>구체적 방법</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>"하게 만들기"</strong></td>
+                        <td>과제 부여 ❌ → "함께 해봅시다" ✓</td>
+                      </tr>
+                      <tr>
+                        <td><strong>신뢰 빌드</strong></td>
+                        <td>도움 요청이 쉬운 환경 조성 (스크럼, 페어 방식)</td>
+                      </tr>
+                      <tr>
+                        <td><strong>지속적 공유</strong></td>
+                        <td>주간 AI 스킬 데모 + Q&amp;A (월 1회 → 주 1회로 단축)</td>
+                      </tr>
+                      <tr>
+                        <td><strong>심리적 안전</strong></td>
+                        <td>바로 샘플로 세팅해주고 빠르게 적응 유도</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p><strong>결과</strong>: 불안감 → 자신감 → 자발적 확산 (타팀 전파)</p>
+
+                <h3>04 | "AI 의존" vs "AI 활용"의 차이점</h3>
+                <h4>의존 상태 ❌</h4>
+                <ul>
+                  <li>도구가 없으면 짜증남 (심각한 신호)</li>
+                  <li>AI의 결과를 무비판적으로 신뢰</li>
+                  <li>"운 좋게 좋은 게 나오겠지" 마인드</li>
+                </ul>
+                <h4>활용 상태 ✓</h4>
+                <ul>
+                  <li><strong>비판적 사고(Critical Thinking)</strong>: 결과물을 항상 검토·판단</li>
+                  <li><strong>최종 책임</strong>: 의사결정과 책임은 사람이 짐</li>
+                  <li><strong>이해 기반</strong>: AI가 뭘 하는지 이해하고 사용</li>
+                  <li><strong>선택지 확대 + 인간의 판단</strong>: AI는 옵션만 제공</li>
+                </ul>
+                <h4>실제 사례</h4>
+                <ul>
+                  <li>고객 데이터 분석 시 AI 차트가 예쁘게 나왔으나, 검증 단계에서 오류 발견 → 즉시 멈추고 재검토</li>
+                  <li>바쁠수록 뒷단 검증이 더 중요함을 깨달음</li>
+                </ul>
+
+                <h3>05 | 직군 관계없이 취미/실험으로 배운 것</h3>
+                <h4>PM의 사례</h4>
+                <ul>
+                  <li>자녀를 위한 AI 기반 교육 게임 개발 (바이블 코딩)</li>
+                  <li>AI 영상 생성 도구(Runway) 실험 → 회사 과제 의사결정에 직결</li>
+                  <li>"써봐야 늘고, 써봐야 판단할 수 있음"</li>
+                </ul>
+                <h4>중요한 경계선</h4>
+                <ul>
+                  <li>✓ 도구를 많이 만져보기 (탐험)</li>
+                  <li>✗ 단순 복제/취미 수준 머물기 (비즈니스 이해 부족)</li>
+                </ul>
+
+                <h3>06 | 대 AI 시대 — 생존 방법</h3>
+                <h4>현재 상황</h4>
+                <ul>
+                  <li>기술 격차 = 시간 문제 (몇 개월~몇 년 안에 AI 결과물 구분 불가)</li>
+                  <li>"누가 만들었느냐"가 중요해짐</li>
+                </ul>
+                <h4>생존 전략</h4>
+                <ol>
+                  <li><strong>정체성/색깔</strong> — "왜 나의 작업을 사람들이 더 좋아할까?"를 고민</li>
+                  <li><strong>고객 중심 사고</strong> — "자신의 생각"보다 "실제 고객 니즈 발견"</li>
+                  <li><strong>비즈니스 이해</strong> — 기술 ➜ 문제 해결 ➜ 비즈니스 확장의 흐름</li>
+                </ol>
+                <h4>핵심</h4>
+                <blockquote>모두가 같은 아웃풋을 만들 수 있으면, 내가 다른 이유 = 내 사고방식, 색깔, 신뢰도</blockquote>
+
+                <h3>07 | 각 직군별 "대체 불가능한 핵심 역량"</h3>
+                <div class="tbl">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>직군</th>
+                        <th>핵심 역량</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>개발</strong></td>
+                        <td>함께 일하고 싶은 사람 (협업 태도, 문제해결 자세)</td>
+                      </tr>
+                      <tr>
+                        <td><strong>디자인</strong></td>
+                        <td>끝없는 호기심 + 주도적 학습</td>
+                      </tr>
+                      <tr>
+                        <td><strong>중소기업 담당</strong></td>
+                        <td>협업 능력 + 정보 연결력</td>
+                      </tr>
+                      <tr>
+                        <td><strong>PM</strong></td>
+                        <td>일의 정의를 협소하게 하지 않기</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <h4>공통점</h4>
+                <blockquote>기술이 높을수록 <strong>인간만이 채울 수 있는 영역</strong>(맥락, 신뢰, 의사결정)이 더 중요해짐</blockquote>
+
+                <h3>08 | 핵심 메시지 정리</h3>
+                <ul class="ilist">
+                  <li><span class="inum">①</span>
+                    <div><strong>AI는 도구일 뿐, 결국은 사람의 사고력과 책임감</strong></div>
+                  </li>
+                  <li><span class="inum">②</span>
+                    <div><strong>문제 정의 &gt; 문제 해결</strong>의 시대로 전환</div>
+                  </li>
+                  <li><span class="inum">③</span>
+                    <div><strong>기초(Fundamental)와 호기심</strong>이 가장 강한 무기</div>
+                  </li>
+                  <li><span class="inum">④</span>
+                    <div><strong>리더/시니어가 먼저 변해야</strong> → 주니어가 따라올 수 있음</div>
+                  </li>
+                  <li><span class="inum">⑤</span>
+                    <div><strong>예측 불가능한 시대일수록 관계와 신뢰가 경쟁력</strong></div>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+          </div><!-- /sess-content-wrap -->
+        </div><!-- /tab-summary -->
+
+        <!-- ── Article Tab ── -->
+        <div class="tab-pane" id="tab-article">
+          <div class="article-wrap">
+
+            <div class="article-sess" data-session="session-1">
+              <p class="article-lead">오늘 세션의 주인공은 단순한 도구로서의 AI가 아닌, <strong>PM의 정의 자체를 다시 쓰고 있는 'AI-Powered
+                  PM'</strong>에 대한 이야기였습니다. 카카오스타일의 프랑스 향 뷰티 커머스 <strong>'Piyonna'</strong>를 구축하며 겪은 치열한 실험과 증명의 기록을
+                풀어냅니다.</p>
+
+              <h3>1. 한계 너머의 시작: 리소스 부족을 '생산성'으로 치환하다</h3>
+              <div class="article-img-grid cols-1">
+                <a class="article-img-link" href="image/s1/s1_01.jpg" target="_blank"><img class="article-img"
+                    src="image/s1/s1_01.jpg" alt="S1 슬라이드 1"></a>
+              </div>
+              <p>모든 신사업이 그렇듯 Piyonna 역시 부족한 일정과 리소스라는 벽에 부딪혔습니다. 특히 과거 글로벌 서비스들이 겪었던 '로컬라이제이션 실패'라는 뼈아픈 경험은 큰 부채였죠. 하지만
+                이번에는 달랐습니다.</p>
+              <p>단순히 현지인을 채용하는 것에 그치지 않고, AI 리서치를 풀가동해 프랑스 현지의 문화적 맥락을 깊이 있게 파고들었습니다. 이를 통해 물리적인 리소스의 한계를 기술적 생산성으로 정면
+                돌파하며 킥오프 전부터 치밀한 업무 프로토콜을 설계했습니다.</p>
+
+              <div class="article-img-grid">
+                <a class="article-img-link" href="image/s1/s1_02.jpg" target="_blank"><img class="article-img"
+                    src="image/s1/s1_02.jpg" alt="S1 슬라이드 3"></a>
+                <a class="article-img-link" href="image/s1/s1_03.jpg" target="_blank"><img class="article-img"
+                    src="image/s1/s1_03.jpg" alt="S1 슬라이드 4"></a>
+              </div>
+              <ul>
+                <li><strong>프론트엔드:</strong> 쇼피파이(Shopify)를 적극 활용해 속도를 확보했습니다.</li>
+                <li><strong>백엔드 및 설계:</strong> 정책과 화면 설계라는 두 가지 태스크를 AI 중심의 파이프라인으로 구축했습니다. PRD를 Claude를 통해 Markdown으로
+                  생성하고 이를 곧장 개발로 연결하는 방식이죠.</li>
+                <li><strong>화면 설계의 실험:</strong> 처음엔 'Figma Make'를 검토했으나, 수정의 유연성이 떨어지는 한계로 인해 'Miro'를 병행하며 최적의 프로토콜을 찾아
+                  나갔습니다.</li>
+              </ul>
+
+              <h3>2. 운명의 날: 2026년 2월 6일, Claude 4.6 Opus의 등장</h3>
+              <div class="article-img-grid">
+                <a class="article-img-link" href="image/s1/s1_05.jpg" target="_blank"><img class="article-img"
+                    src="image/s1/s1_05.jpg" alt="S1 슬라이드 5"></a>
+                <a class="article-img-link" href="image/s1/s1_06.jpg" target="_blank"><img class="article-img"
+                    src="image/s1/s1_06.jpg" alt="S1 슬라이드 6"></a>
+              </div>
+              <p>세션 중 가장 흥미로웠던 대목은 <strong>"일하는 방식이 바뀐 날이 언제인가?"</strong>라는 질문에 대한 답변이었습니다. 연사는 주저 없이 2026년 2월 6일을
+                꼽았습니다. 바로 Claude 4.6 Opus가 공개된 날입니다.</p>
+              <p>이날을 기점으로 AI는 더 이상 '재미있는 실험' 수준이 아니게 되었습니다. 비개발 실무자들의 사고방식과 업무 양상이 완전히 뒤바뀌었죠.</p>
+
+              <div class="article-img-grid">
+                <a class="article-img-link" href="image/s1/s1_04.jpg" target="_blank"><img class="article-img"
+                    src="image/s1/s1_04.jpg" alt="S1 슬라이드 4"></a>
+                <a class="article-img-link" href="image/s1/s1_07.jpg" target="_blank"><img class="article-img"
+                    src="image/s1/s1_07.jpg" alt="S1 슬라이드 7"></a>
+                <a class="article-img-link" href="image/s1/s1_11.jpg" target="_blank"><img class="article-img"
+                    src="image/s1/s1_11.jpg" alt="S1 슬라이드 11"></a>
+                <a class="article-img-link" href="image/s1/s1_08.jpg" target="_blank"><img class="article-img"
+                    src="image/s1/s1_08.jpg" alt="S1 슬라이드 8"></a>
+              </div>
+              <ul>
+                <li><strong>PM의 일당백:</strong> 이제 소수의 정예 인원이 할 수 있는 영역이 극대화되었습니다.</li>
+                <li><strong>피그마의 종말(?):</strong> Claude가 PRD를 읽고 곧바로 HTML 코드를 생성해 피그마로 넘기거나 개발자에게 전달하게 되면서, PM이나 PO가 일일이
+                  화면을 그리기 위해 피그마를 붙잡고 있을 필요가 없어졌습니다.</li>
+                <li><strong>디자인 QA의 자동화:</strong> 디자인 생성 자체에는 여전히 한계가 있지만, Claude를 연결해 디자인 QA 테스트 케이스를 생성하고 사후 문서 관리까지
+                  자동화하며 퀄리티를 방어했습니다.</li>
+              </ul>
+
+              <div class="article-img-grid cols-1">
+                <a class="article-img-link" href="image/s1/s1_10.jpg" target="_blank"><img class="article-img"
+                    src="image/s1/s1_10.jpg" alt="S1 슬라이드 10"></a>
+              </div>
+              <p>가장 놀라운 지점은 PM이 코드를 대하는 방식입니다. Claude Code가 생성된 코드를 완벽하게 분석하기 시작하면서, PM은 깃(Git)에 소스코드를 올려두고
+                <strong>MCP(Model Context Protocol)</strong>로 연결해 직접 문제를 확인합니다.
+              </p>
+              <p style="font-style:italic;color:var(--text2);">"지금 코드를 보니 데이터가 이렇게 나가고 있는데, 이게 맞는 건가요?"</p>
+              <p>PM이 직접 깃과 Redash API를 활용해 데이터를 확인하고 문제를 발견하는 시대가 온 것입니다. 이는 복잡한 레거시가 없는 신사업이었기에 가능했던 과감한 시도였습니다.</p>
+              <p>또한, 번역 업무에서는 '생성-검증'의 반복 구조를 택했습니다. SQL로 상품 정보를 불러와 AI 모델이 번역하고, 이를 다시 평가한 뒤 유의미한 결과가 나왔을 때만 개발에 넘겼습니다.
+                이 과정에서 불필요한 커뮤니케이션 버퍼가 완전히 제거되었습니다. 심지어 슬랙의 대화와 개인 메모를 AI가 요약해 <strong>데일리 워크 투두(To-do)</strong>까지 정리해
+                주는 수준에 이르렀죠.</p>
+
+              <h3>4. AI-Powered PM의 사고방식과 새로운 인재상</h3>
+              <div class="article-img-grid cols-1">
+                <a class="article-img-link" href="image/s1/s1_14.jpg" target="_blank"><img class="article-img"
+                    src="image/s1/s1_14.jpg" alt="S1 슬라이드 14"></a>
+              </div>
+              <p>결국 기술보다 중요한 것은 이를 다루는 <strong>사고방식(Mindset)</strong>이었습니다. 연사는 경계가 없어진 시대에 PM이 가져야 할 4가지 원칙을 제시하며
+                세션을 갈무리했습니다.</p>
+              <ul>
+                <li><strong>경계를 넘는다:</strong> 리소스 핑계로 요구사항을 컷팅하지 않습니다. AI를 통해 직접 최선의 결과물을 시도하고, 개념만 개발에 전달하는 '프로덕트 빌더'의
+                  태도가 필요합니다.</li>
+                <li><strong>루프를 설계한다:</strong> AI의 첫 결과물을 완성이 아닌 '재료'로 생각합니다. 한 번의 생성이 아니라 '생산-검증-재생성'의 루프를 설계해 결과물을
+                  고도화합니다.</li>
+                <li><strong>결정의 무게를 견딘다:</strong> 속도가 빨라지고 비용이 낮아진 '저비용 시대'일수록 무엇을 만들지 결정하는 PM의 판단력이 성패를 가릅니다.</li>
+                <li><strong>메이커를 존중한다:</strong> 무엇이든 만들 수 있는 시대이지만, 아무거나 만들지 않습니다. 동료의 전문성을 존중하며 기술과 사람의 조화를 꾀합니다.</li>
+              </ul>
+              <div class="article-img-grid">
+                <a class="article-img-link" href="image/s1/s1_12.jpg" target="_blank"><img class="article-img"
+                    src="image/s1/s1_12.jpg" alt="S1 슬라이드 12"></a>
+                <a class="article-img-link" href="image/s1/s1_13.jpg" target="_blank"><img class="article-img"
+                    src="image/s1/s1_13.jpg" alt="S1 슬라이드 13"></a>
+              </div>
+              <p>이러한 변화는 실제 <strong>채용의 기준</strong>까지 바꾸어 놓았습니다. 실제 전시 담당 PO가 퇴사하고 신규 PO를 채용하는 과정에서, 단순히 스펙이 좋은 사람보다 'AI
+                활용 메타로 문제를 아예 다르게 해결할 수 있는 사람'을 찾는 것이 핵심이 되었습니다. 인공지능이 포트폴리오의 상향 평준화를 가져온 만큼, 면접에서는 "지금의 AI 환경이라면 이
+                프로젝트를 어떻게 풀어냈을지"와 같은 사고의 깊이를 묻는 것이 필수가 되었습니다.</p>
+              <h3>5. 마치며: 우리 팀은 AI로 얼마나 변했는가?</h3>
+              <div class="article-img-grid">
+                <a class="article-img-link" href="image/s1/s1_16.jpg" target="_blank"><img class="article-img"
+                    src="image/s1/s1_16.jpg" alt="S1 슬라이드 16"></a>
+                <a class="article-img-link" href="image/s1/s1_15.jpg" target="_blank"><img class="article-img"
+                    src="image/s1/s1_15.jpg" alt="S1 슬라이드 15"></a>
+              </div>
+              <p>연사는 마지막으로 청중에게 질문을 던졌습니다. <strong>"여러분의 팀은 AI로 지금 얼마나 변하셨습니까?"</strong> 전체 조직은 팀보다 빠를 수 없고, 팀은 개인보다 빠를
+                수 없습니다. 결국 먼저 써본 개인의 경험이 팀의 시스템을 바꾸고, 나아가 제품을 만드는 방식 자체를 혁신하게 될 것입니다.</p>
+
+              <h3>여담과 시사점</h3>
+              <div class="article-img-grid cols-1">
+                <a class="article-img-link" href="image/s1/s1_17.jpg" target="_blank"><img class="article-img"
+                    src="image/s1/s1_17.jpg" alt="S1 슬라이드 17"></a>
+              </div>
+              <p>마지막으로 쇼피파이 어드민의 변화가 언급되었습니다. 마치 n8n처럼 사용자가 직접 필요한 부분을 설계해 쓸 수 있도록 진화하고 있다는 점이죠. 과거의 MSA(마이크로서비스 아키텍처)가
+                ERD를 일일이 뜯어봐야 했다면, 이제는 <strong>바이브 코딩(Vibe Coding)</strong>의 산출물을 Markdown으로 분석하며 훨씬 직관적으로 시스템을 이해할 수 있게
+                되었습니다.</p>
+              <p>AI와 함께 걷는 PM은 이제 관리자를 넘어, 제품의 설계도와 실행력을 동시에 쥐는 <strong>'전천후 메이커'</strong>로 거듭나고 있었습니다.</p>
+            </div>
+
+            <div class="article-sess" data-session="session-2">
+              <p class="article-lead">"AI가 이렇게 발전하는데, 내 프로덕트가 위협받는 것 아니야?" 생성형 AI의 등장은 많은 서비스 기획자들에게 공포와 설레임을 동시에
+                안겨주었습니다. 미리디가 제공하던 핵심 가치가 흔들리던 순간, 그들이 어떻게 다시 사용자의 마음을 사로잡았는지 그 과정을 들여다봅니다.</p>
+
+              <h3>1. 가설의 함정: "초안만 만들어주면 다 해결될까?"</h3>
+              <p>초기 미리디의 고민은 명확했습니다. 사용자의 디자인 완성 시간과 액션 수를 줄여 비즈니스 임팩트를 만드는 것이었죠.</p>
+              <ul>
+                <li><strong>첫 번째 가설:</strong> "AI로 디자인 초안을 만들어주면 편집 시간이 획기적으로 줄어들 것이다." → 가설 검증 성공. 템플릿 선택과 편집 시간을 줄여주는
+                  데 효과가 있었습니다.</li>
+                <li><strong>두 번째 가설:</strong> "초안 이후의 편집 과정까지 AI가 해결해주면 어떨까?" → '딱 맞는 페이지 찾기' 기능 출시와 함께 미드저니의 시스템 프롬프트를
+                  기능화한 AI 디자인 모음 <strong>'미리클'</strong>을 선보였습니다.</li>
+              </ul>
+              <p>하지만 여기서 예상치 못한 문제에 봉착합니다. 기능은 화려했지만 <strong>'타깃 없는 기능'</strong>이었던 것이죠. MAU 상승에 기여하지 못했고, 일평균 회원가입 수는
+                100명도 채 되지 않았습니다.</p>
+
+              <h3>2. Insight 1 &amp; 2: 허영 지표를 넘어 리텐션의 세계로</h3>
+              <div class="article-img-grid cols-1">
+                <a class="article-img-link" href="image/s2/s2_01.jpg" target="_blank"><img class="article-img"
+                    src="image/s2/s2_01.jpg" alt="소상공인 타깃 집중"></a>
+              </div>
+              <p>미리디는 기능 추가 중심의 접근을 중단하고, 다시 <strong>'소상공인'</strong>이라는 명확한 타깃에 집중했습니다. 인터뷰를 통해 그들의 진짜 문제를 파고들자 일평균 가입자가
+                700명 이상으로 치솟았습니다.</p>
+              <div class="article-insight">Insight 1: AI 프로덕트는 높은 성능보다 명확한 타깃이 우선시되어야 한다.</div>
+
+              <div class="article-img-grid">
+                <a class="article-img-link" href="image/s2/s2_04.jpg" target="_blank"><img class="article-img"
+                    src="image/s2/s2_04.jpg" alt="사용자 수 증가 지표"></a>
+                <a class="article-img-link" href="image/s2/s2_03.jpg" target="_blank"><img class="article-img"
+                    src="image/s2/s2_03.jpg" alt="PMF 달성 기준"></a>
+              </div>
+              <p>하지만 유입이 전부는 아니었습니다. MAU는 늘었지만, 정작 유료 모델로 이어지는 다운로드 리텐션은 저조했습니다. 가입 당일 전환율은 80%에 육박했지만, 대부분 "신기하네!" 하고 한
+                번 쓰고 버리는 '일회성 경험'에 그쳤던 것이죠. 지속 가능한 BM이 없는 AI 프로덕트는 위험했습니다. 미리디는 진정한 <strong>PMF(Product Market
+                  Fit)</strong>를 달성하기 위한 기준을 재설정했습니다.</p>
+              <div class="article-insight">Insight 2: AI 프로덕트 신규 유입은 허영 지표일 뿐이다. 리텐션을 만들어야 살아남는다.</div>
+
+              <h3>3. Insight 3: 데이터는 방향을, 사용자는 '이유'를 알려준다</h3>
+              <div class="article-img-grid cols-1">
+                <a class="article-img-link" href="image/s2/s2_02.jpg" target="_blank"><img class="article-img"
+                    src="image/s2/s2_02.jpg" alt="기능 추천 가설"></a>
+              </div>
+              <p>미리디 팀은 '다시 돌아오는 사람들'의 특징을 분석했습니다. 가입 당일 생성 요청 3회 이상, 여러 기능을 복합적으로 사용하는 이들이 소위 '아하 모먼트(Aha-moment)'를 경험할
+                것이라 믿고 기능을 추천했지만, 지표는 움직이지 않았습니다.</p>
+
+              <div class="article-img-grid">
+                <a class="article-img-link" href="image/s2/s2_05.jpg" target="_blank"><img class="article-img"
+                    src="image/s2/s2_05.jpg" alt="미리클 2.0 UX 개선"></a>
+                <a class="article-img-link" href="image/s2/s2_10.jpg" target="_blank"><img class="article-img"
+                    src="image/s2/s2_10.jpg" alt="사용자 이탈 분석"></a>
+              </div>
+              <p>다시 사용자를 만났습니다. 그들이 말하는 진짜 니즈는 '단순한 여러 번의 기능 사용'이 아니라 '내가 원하는, 진짜 쓸만한 좋은 디자인을 완성하는 경험' 그 자체였습니다. 원하는
+                결과물을 만들기 위해 더 많이 노력해야 한다는 피로감을 줄이는 것이 급선무였습니다.</p>
+              <div class="article-insight">Insight 3: 데이터는 방향을 알려줄 뿐, 진짜 이유는 사용자의 목소리에 있다.</div>
+
+              <div class="article-img-grid cols-1">
+                <a class="article-img-link" href="image/s2/s2_06.jpg" target="_blank"><img class="article-img"
+                    src="image/s2/s2_06.jpg" alt="지표 상승 결과"></a>
+              </div>
+              <p>이를 바탕으로 탄생한 <strong>'미리클 2.0'</strong>은 단순히 기능을 나열하는 것이 아니라, 결과물 완성을 위한 연속성 있는 UX를 제공하는 데 집중했고, 이는 곧
+                다운로드 리텐션 및 NPS 상승으로 이어졌습니다.</p>
+
+              <h3>4. Insight 4 &amp; 5: 사용자가 쓰는 방식에 답이 있다</h3>
+              <div class="article-img-grid cols-1">
+                <a class="article-img-link" href="image/s2/s2_09.jpg" target="_blank"><img class="article-img"
+                    src="image/s2/s2_09.jpg" alt="의도하지 않은 사용자 방식 발견"></a>
+              </div>
+              <p>수익 정체를 극복하기 위해 퀀텀 점프를 노리던 시기, 팀은 의도하지 않은 사용자 행동을 발견합니다. 사용자들이 새로 만드는 것이 아니라, 이미 가지고 있는 완성형 포스터를 인풋으로 넣는
+                모습을 포착한 것입니다.</p>
+
+              <div class="article-img-grid cols-1">
+                <a class="article-img-link" href="image/s2/s2_08.jpg" target="_blank"><img class="article-img"
+                    src="image/s2/s2_08.jpg" alt="리디자인 기능 출시"></a>
+              </div>
+              <p>미리디는 이를 놓치지 않고 '이미 있는 디자인이 마음에 들지 않는 사용자'를 위해 새로운 스타일로 개선해주는 기능으로 피벗했고, 지표는 파격적으로 상승했습니다.</p>
+              <div class="article-insight">Insight 4: 사용자가 AI를 쓰는 방식에 답이 있다. 그 패턴이 프로덕트의 핵심이 된다.</div>
+
+              <h3>마무리하며: AI 시대, 결국 본질은 '사용자 문제'</h3>
+              <p>미리디의 답변은 단호했습니다. AI 프로덕트라고 해서 특별한 비법이 있는 것이 아닙니다. 결국 명확한 타깃, 리텐션, 사용자의 목소리, 그리고 사용자의 행동 패턴이라는 프로덕트의 본질은
+                변하지 않습니다.</p>
+              <div class="article-insight">Insight 5: AI가 발전할수록 사용자 문제에 더 가까이 가는 프로덕트가 강해진다.</div>
+              <p>기술의 화려함에 매몰되지 않고, 사용자가 AI를 통해 무엇을 해결하고 싶어 하는지를 끝까지 추적하는 것. 그것이 생성형 AI 세상에서 프로덕트가 살아남는 유일한 길임을 깨닫게 해준
+                세션이었습니다.</p>
+            </div>
+
+
+            <div class="article-sess" data-session="session-3">
+              <p class="article-lead">내일을 계획하기조차 어려울 정도로 기술 변화가 빠른 요즘입니다. 빅테크 기업들이 헤게모니 장악을 위해 앞다투어 기술을 내놓고, 실무에서는 토큰
+                사용량과 업무 생산성 지표를 모니터링하는 것이 일상이 되었죠. 이러한 격변의 시기, 디자이너는 어떤 위치에 서야 할까요?</p>
+
+              <div class="article-img-grid">
+                <a class="article-img-link" href="image/s3/s3_3.jpg" target="_blank"><img class="article-img"
+                    src="image/s3/s3_3.jpg" alt="S3 슬라이드 3"></a>
+                <a class="article-img-link" href="image/s3/s3_5.jpg" target="_blank"><img class="article-img"
+                    src="image/s3/s3_5.jpg" alt="S3 슬라이드 5"></a>
+              </div>
+
+              <h3>1. 극단적 효율화: 팀의 에너지를 보존하는 법</h3>
+              <div class="article-img-grid">
+                <a class="article-img-link" href="image/s3/s3_8.jpg" target="_blank"><img class="article-img"
+                    src="image/s3/s3_8.jpg" alt="S3 슬라이드 8"></a>
+                <a class="article-img-link" href="image/s3/s3_24.jpg" target="_blank"><img class="article-img"
+                    src="image/s3/s3_24.jpg" alt="S3 슬라이드 24"></a>
+              </div>
+              <p>뱅크샐러드 디자인팀의 사례는 놀라웠습니다. 그들은 CUJ(핵심 사용자 여정) 시뮬레이터와 VOC 통합 대시보드 같은 AI 도구를 활용해 팀 차원의 에너지 소모를 극단적으로
+                효율화했습니다.</p>
+
+              <div class="article-img-grid">
+                <a class="article-img-link" href="image/s3/s3_9.jpg" target="_blank"><img class="article-img"
+                    src="image/s3/s3_9.jpg" alt="S3 슬라이드 9"></a>
+                <a class="article-img-link" href="image/s3/s3_10.jpg" target="_blank"><img class="article-img"
+                    src="image/s3/s3_10.jpg" alt="S3 슬라이드 10"></a>
+              </div>
+              <p>단순히 "빨라졌다"는 것을 넘어, 이제 협업의 레이어는 점점 더 복잡해지고 있습니다. 디자이너와 개발자, 기획자 사이의 협업뿐만 아니라, 그들 사이사이에 n개의 AI 에이전트가 끼어들어
+                함께 일하는 구조가 된 것이죠.</p>
+
+              <div class="article-img-grid">
+                <a class="article-img-link" href="image/s3/s3_4.jpg" target="_blank"><img class="article-img"
+                    src="image/s3/s3_4.jpg" alt="S3 슬라이드 4"></a>
+                <a class="article-img-link" href="image/s3/s3_7.jpg" target="_blank"><img class="article-img"
+                    src="image/s3/s3_7.jpg" alt="S3 슬라이드 7"></a>
+              </div>
+
+              <h3>2. 기술의 언어를 경험의 언어로: 왜 여전히 사람인가?</h3>
+              <div class="article-img-grid cols-1">
+                <a class="article-img-link" href="image/s3/s3_6.jpg" target="_blank"><img class="article-img"
+                    src="image/s3/s3_6.jpg" alt="S3 슬라이드 6"></a>
+              </div>
+              <p>통계에 따르면 AI 도입으로 생산성은 66%, 속도는 82% 향상되었지만, 아이러니하게도 <strong>"사람과 일하고 싶다"는 응답은 93%</strong>에 달했습니다. 기술과 사람
+                사이의 NPS(순추천지수) 격차가 무려 72pt나 벌어진 이유는 무엇일까요?</p>
+              <p>구글 어시스턴트의 초기 모델 사례에서 그 답을 찾을 수 있습니다. 초기에 멀티모달 기술을 뽐내며 등장했을 때 사용자의 반응은 냉담했습니다. 여정의 주인공이 '사용자'가 아닌
+                '기술'이었기 때문이죠.</p>
+              <p>결국 사람들이 원하는 것은 세상에 없던 화려한 기술이 아니라, 오늘 나의 일상을 묵묵히 도와주는 서비스의 경험 그 순간입니다. 디자이너는 바로 이 지점에서 '기술의 언어'를 '경험의
+                언어'로 번역해 주는 역할을 해야 합니다.</p>
+
+              <h3>3. 효율의 역설과 '의도적 마찰'</h3>
+              <div class="article-img-grid cols-1">
+                <a class="article-img-link" href="image/s3/s3_23.jpg" target="_blank"><img class="article-img"
+                    src="image/s3/s3_23.jpg" alt="S3 슬라이드 23"></a>
+              </div>
+              <p>모든 것이 매끄럽게 연결되는 극단의 효율 시대가 오자, 오히려 관계는 희미해졌습니다. 여기서 흥미로운 개념인 '노동의 환상(Labor Illusion)' 연구가 언급되었습니다.</p>
+              <p>AI가 답변을 내놓을 때, 즉시 결과만 주는 것보다 답변을 생성하는 과정(생각하는 중...)을 노출하는 설계가 사용자에게 더 높은 신뢰와 만족감을 준다는 것입니다. 이를 위해 디자이너는
+                때로 '의도적 멈춤'과 '의도적 마찰'을 설계해야 합니다. 모든 것을 효율로만 판단하지 않는 인간적인 감각이 필요한 지점입니다.</p>
+
+              <h3>4. 변함없이 더 중요한 것들: Human in the Loop</h3>
+              <div class="article-img-grid">
+                <a class="article-img-link" href="image/s3/s3_11.jpg" target="_blank"><img class="article-img"
+                    src="image/s3/s3_11.jpg" alt="S3 슬라이드 11"></a>
+                <a class="article-img-link" href="image/s3/s3_25.jpg" target="_blank"><img class="article-img"
+                    src="image/s3/s3_25.jpg" alt="S3 슬라이드 25"></a>
+              </div>
+              <p>기술이 발전해도 변하지 않는 핵심 가치들이 있습니다.</p>
+              <ul>
+                <li><strong>Human in the loop:</strong> 시작과 끝은 결국 사람이어야 합니다.</li>
+                <li><strong>Empathy:</strong> 사용자의 고통과 니즈에 깊게 공감하는 능력.</li>
+                <li><strong>Taste(안목):</strong> 수많은 생성물 중 최선의 것을 선별하고 선택하는 기준.</li>
+              </ul>
+              <p>시대를 관통하는 메시지는 결국 <strong>"좋은 것(Good) 80%는 AI가 대체하겠지만, 위대한 것(Great) 20%는 여전히 사람이 만든다"</strong>는 사실입니다.
+              </p>
+
+              <h3>5. 미지의 시대를 위한 실천: 대체 불가능한 디자이너의 역량</h3>
+              <div class="article-img-grid">
+                <a class="article-img-link" href="image/s3/s3_26.jpg" target="_blank"><img class="article-img"
+                    src="image/s3/s3_26.jpg" alt="S3 슬라이드 26"></a>
+                <a class="article-img-link" href="image/s3/s3_27.jpg" target="_blank"><img class="article-img"
+                    src="image/s3/s3_27.jpg" alt="S3 슬라이드 27"></a>
+              </div>
+              <p>연사가 강조한 대체 불가능한 능력은 두 가지였습니다.</p>
+              <ol>
+                <li><strong>안목과 커뮤니케이션:</strong> 좋은 것을 알아보는 눈, 그리고 그것이 왜 좋은지 효과적으로 설명하고 설득하는 스킬입니다.</li>
+                <li><strong>머슬 메모리(Muscle Memory):</strong> AI를 단순히 학습의 대상으로 보는 것이 아니라, 내 몸의 근육처럼 네이티브하게 다룰 수 있을 때까지
+                  체화하는 것입니다.</li>
+              </ol>
+              <div class="article-img-grid cols-1">
+                <a class="article-img-link" href="image/s3/s3_28.jpg" target="_blank"><img class="article-img"
+                    src="image/s3/s3_28.jpg" alt="S3 슬라이드 28"></a>
+              </div>
+              <p>이제 디자이너는 AI라는 수많은 연주자를 이끌고 최상의 하모니를 만들어내는 <strong>'지휘자'</strong>의 모습으로 진화하고 있습니다.</p>
+            </div>
+
+            <div class="article-sess" data-session="session-4">
+              <p class="article-lead">"우리가 해결하려는 문제가 AI인가요, 아니면 고객의 문제인가요?"
+                AI가 모든 대화의 중심이 된 지금, 오늘의집은 오히려 가장 본질적인 '고객'의 이야기로 돌아갔습니다.</p>
+
+              <div class="article-img-grid">
+                <a class="article-img-link" href="image/s4/s4_2.jpg" target="_blank"><img class="article-img"
+                    src="image/s4/s4_2.jpg" alt="S4 슬라이드 2"></a>
+                <a class="article-img-link" href="image/s4/s4_3.jpg" target="_blank"><img class="article-img"
+                    src="image/s4/s4_3.jpg" alt="S4 슬라이드 3"></a>
+              </div>
+              <h3>1. CRM의 재정의: "헤어질 때 잡지 말고, 처음부터 잘하자"</h3>
+              <p>연사님은 과거 통신사 시절의 CRM을 떠올리며 이야기를 시작했습니다. 보통 통신사들은 약정이 끝날 무렵인 18개월 차부터 고객을 놓치지 않기 위해 가격 혜택을 제시하며 '헤어질 무렵의
+                CRM'을 시작합니다.</p>
+              <p>하지만 오늘의집은 달랐습니다. 가입 1개월 차부터 시작되는 CRM을 설계했죠. 단순히 메시지를 보내는 팀이 아니라, 고객의 전체 생애 주기를 관리하는 팀으로서 가격 소구뿐만 아니라
+                유저의 상황에 맞는 정교한 액션들을 배치하기 시작했습니다. 가입 초기에는 첫 구매를 유도하고, 재구매 시점에는 적절한 프로모션을, 거래액이 미달할 때는 맞춤형 혜택을 제안하는 식입니다.
+              </p>
+
+              <div class="article-img-grid cols-1">
+                <a class="article-img-link" href="image/s4/s4_4.jpg" target="_blank"><img class="article-img"
+                    src="image/s4/s4_4.jpg" alt="S4 슬라이드 4"></a>
+              </div>
+              <h3>2. 위기 속의 가설: "이사할 때만 쓰고 끝나는 서비스인가?"</h3>
+              <p>코로나 특수가 끝나고 '레이어드 홈' 열풍이 잦아들 무렵, 임원진은 위기를 직감했습니다. "사람들이 이사할 때만 오늘의집을 쓰고 나면 다신 안 온다"는 우려가 컸죠. 이때 팀은 우리의
+                핵심 유저가 누구인지, 리소스를 어디에 집중할지 치열하게 고민했습니다. 그리고 데이터에서 결정적인 단서를 찾아냈습니다.</p>
+              <ul>
+                <li><strong>신규 가입자의 반등 패턴:</strong> 데이터를 보니 신규 가입 후 2년 주기로 구매 지표가 다시 튀어 오르는 패턴이 포착되었습니다. 바로 <strong>'전월세
+                    만료와 이사 시점'</strong>이었습니다.</li>
+              </ul>
+              <div class="article-img-grid cols-1">
+                <a class="article-img-link" href="image/s4/s4_5.jpg" target="_blank"><img class="article-img"
+                    src="image/s4/s4_5.jpg" alt="S4 슬라이드 5"></a>
+              </div>
+              <ul>
+                <li><strong>시장의 거대한 기회:</strong> 통계청 데이터에 따르면 이사 관련 시장은 월 1.3조 규모였으나, 당시 오늘의집 거래액은 그 10% 수준인 1,500억에
+                  불과했습니다.</li>
+              </ul>
+              <div class="article-img-grid cols-1">
+                <a class="article-img-link" href="image/s4/s4_6.jpg" target="_blank"><img class="article-img"
+                    src="image/s4/s4_6.jpg" alt="S4 슬라이드 6"></a>
+              </div>
+              <ul>
+                <li><strong>진단:</strong> 유저들은 이사 시점에 콘텐츠는 오늘의집에서 보지만, 실제 구매는 다른 플랫폼에서 하고 있었습니다. 이사 고객의 문제를 제대로 해결하지
+                  못하고 있었다는 증거였죠.</li>
+              </ul>
+              <div class="article-img-grid cols-1">
+                <a class="article-img-link" href="image/s4/s4_7.jpg" target="_blank"><img class="article-img"
+                    src="image/s4/s4_7.jpg" alt="S4 슬라이드 7"></a>
+              </div>
+              <div class="article-img-grid">
+                <a class="article-img-link" href="image/s4/s4_8.jpg" target="_blank"><img class="article-img"
+                    src="image/s4/s4_8.jpg" alt="S4 슬라이드 8"></a>
+                <a class="article-img-link" href="image/s4/s4_9.jpg" target="_blank"><img class="article-img"
+                    src="image/s4/s4_9.jpg" alt="S4 슬라이드 9"></a>
+              </div>
+
+              <h3>3. 버티컬 전략: 이사 여정의 길목을 지키는 '컨텍 맵'</h3>
+              <p>오늘의집은 월별 30만 명에 달하는 이사 유저를 감지하고, 그들의 D-Day를 기준으로 서비스를 적시에 제안하기 시작했습니다.</p>
+              <ul>
+                <li><strong>시기별 제안:</strong> 이사 3개월 전부터 1개월 전까지, 각 시기에 필요한 체크리스트와 태스크를 추천했습니다. 특히 유저의 예산에 맞춰 3단계로 구분된
+                  제안을 통해 실질적인 도움을 주었죠.</li>
+                <li><strong>이사 후의 락인(Lock-in):</strong> 이사가 끝났다고 끝이 아닙니다. 이사 직후(M+1)에는 아직 채워지지 않은 공간 꾸미기를 유도하고, M+2에는
+                  스크랩한 상품의 가격 하락 알림이나 브랜드 인게이지먼트를 강화했습니다.</li>
+                <li><strong>카테고리의 확장:</strong> "소파를 샀다면 이불도 필요하겠지?"와 같이 구매 맥락을 유지하며 카테고리를 안내하는 실험을 지속하고 있습니다.</li>
+              </ul>
+              <div class="article-img-grid">
+                <a class="article-img-link" href="image/s4/s4_14.jpg" target="_blank"><img class="article-img"
+                    src="image/s4/s4_14.jpg" alt="S4 슬라이드 14"></a>
+                <a class="article-img-link" href="image/s4/s4_15.jpg" target="_blank"><img class="article-img"
+                    src="image/s4/s4_15.jpg" alt="S4 슬라이드 15"></a>
+                <a class="article-img-link" href="image/s4/s4_16.jpg" target="_blank"><img class="article-img"
+                    src="image/s4/s4_16.jpg" alt="S4 슬라이드 16"></a>
+                <a class="article-img-link" href="image/s4/s4_17.jpg" target="_blank"><img class="article-img"
+                    src="image/s4/s4_17.jpg" alt="S4 슬라이드 17"></a>
+              </div>
+
+              <h3>4. Insight: 기술보다 앞서는 것은 고객의 목소리</h3>
+              <div class="article-img-grid">
+                <a class="article-img-link" href="image/s4/s4_19.jpg" target="_blank"><img class="article-img"
+                    src="image/s4/s4_19.jpg" alt="S4 슬라이드 19"></a>
+                <a class="article-img-link" href="image/s4/s4_20.jpg" target="_blank"><img class="article-img"
+                    src="image/s4/s4_20.jpg" alt="S4 슬라이드 20"></a>
+              </div>
+              <p>세션의 마무리는 결국 '본질'이었습니다. AI 시대가 와도 변하지 않는 사실은 고객은 서비스가 AI를 얼마나 잘 쓰는지가 아니라 <strong>'내 문제를 해결해
+                  주는가'</strong>에만 관심이 있다는 것입니다.</p>
+              <p>연사님은 핵심 고객을 정의할 때 단순히 활성/이탈 같은 상태 데이터로만 구분하는 실수를 범하지 말라고 조언했습니다. 반드시 유저의 목소리(VOC)를 듣고 가설을 세워야만 진짜 문제가
+                보인다는 것이죠. 비즈니스 전략 측면에서는 타깃을 명확히 쪼개어 이해관계자를 설득하고, 커뮤니케이션 측면에서는 쪼갤수록 강력한 개인화 메시지가 힘을 발휘한다는 통찰을 전하며 세션을
+                마쳤습니다.</p>
+              <p>기술이 빨라지고 화려해질수록, 다시 '이사 여정'이라는 수직적인 고객의 문제에 딥다이브한 오늘의집 사례는 우리에게 큰 시사점을 줍니다. 결국 정교한 문제 해결의 끝은 언제나 고객으로부터
+                시작된다는 것을요.</p>
+            </div>
+
+            <div class="article-sess" data-session="session-5">
+              <p class="article-lead">"AI를 많이 쓰는 것과 잘 쓰는 것의 차이는 어디에서 올까요?" 맥킨지는 인간과 AI가 협업하는 팀 구조가 더 이상 미래의 이야기가 아니라고
+                말합니다. 사용자 리서치를 AI로 재현하는 프로덕트 <strong>'엔소나(Ensona)'</strong>의 사례는 그 신뢰의 기틀을 어떻게 다져야 하는지 보여줍니다.</p>
+
+              <h3>1. 탄생과 피벗: 리서치 도구에서 '전문가 동료'로</h3>
+              <p>엔소나의 시작은 명확하게 <strong>'AI 사용자 리서치'</strong>에 있었습니다. 처음에는 정성적인 인뎁스 인터뷰와 정량적인 서베이(리커트 척도 등) 데이터를 학습시켜 실제
+                사용자의 목소리를 재현하려 했죠.</p>
+              <p>하지만 실제 유저들은 엔소나를 경험하며 뜻밖의 반응을 보였습니다. "사용자 한 명을 복제한 클론과 대화하는 게 아니라, 유저를 누구보다 잘 아는 전문가 동료와 이야기하는 것 같다"는
+                피드백이 쏟아진 것입니다. 엔소나 팀은 이 지점에서 제품의 방향을 수정했습니다. 단순히 '유저 재현'에 그치지 않고, 다양한 분야의 전문가 퍼소나들이 함께 모여 다자대화를 나누며 메이커의
+                의사결정을 돕는 '협업 동료' 컨셉으로 진화한 것입니다.</p>
+              <div class="article-img-grid">
+                <a class="article-img-link" href="image/s5/s5_8.jpg" target="_blank"><img class="article-img"
+                    src="image/s5/s5_8.jpg" alt="S5 슬라이드 8"></a>
+                <a class="article-img-link" href="image/s5/s5_9.jpg" target="_blank"><img class="article-img"
+                    src="image/s5/s5_9.jpg" alt="S5 슬라이드 9"></a>
+              </div>
+
+              <h3>2. 신뢰의 설계: "측정되지 않는 것은 개선될 수 없다"</h3>
+              <div class="article-img-grid">
+                <a class="article-img-link" href="image/s5/s5_10.jpg" target="_blank"><img class="article-img"
+                    src="image/s5/s5_10.jpg" alt="S5 슬라이드 10"></a>
+                <a class="article-img-link" href="image/s5/s5_11.jpg" target="_blank"><img class="article-img"
+                    src="image/s5/s5_11.jpg" alt="S5 슬라이드 11"></a>
+              </div>
+              <p>신뢰는 단순히 "믿어주세요"라고 말한다고 생기지 않습니다. 특히 지금처럼 실효성이 강조되는 시대에는 더욱 그렇죠. 엔소나 팀은 막연한 자연어 대화 뭉치를 명확한 판단 근거로 바꾸기 위해
+                <strong>계층적인 루브릭(Rubric)</strong>과 정량 품질 측정 파이프라인을 설계했습니다.
+              </p>
+              <ul>
+                <li><strong>에이전트 단일 발화 평가:</strong> 개별 AI가 능력이 있는지, 도움이 되려 하는지, 일관된 원칙이 있는지 등 '협업 태도'에 대한 6가지 루브릭으로 신뢰를
+                  측정합니다.</li>
+              </ul>
+              <div class="article-img-grid">
+                <a class="article-img-link" href="image/s5/s5_14.jpg" target="_blank"><img class="article-img"
+                    src="image/s5/s5_14.jpg" alt="S5 슬라이드 14"></a>
+                <a class="article-img-link" href="image/s5/s5_15.jpg" target="_blank"><img class="article-img"
+                    src="image/s5/s5_15.jpg" alt="S5 슬라이드 15"></a>
+              </div>
+              <div class="article-img-grid cols-1">
+                <a class="article-img-link" href="image/s5/s5_16.jpg" target="_blank"><img class="article-img"
+                    src="image/s5/s5_16.jpg" alt="S5 슬라이드 16"></a>
+              </div>
+              <ul>
+                <li><strong>멀티 에이전트 대화 평가:</strong> 여러 AI 간의 대화가 협업 목적을 달성했는지, 대화가 흐르면서 점진적으로 '집단 지성'의 변화가 나타나는지 5가지
+                  루브릭으로 효과성을 평가합니다.</li>
+              </ul>
+              <div class="article-img-grid cols-1">
+                <a class="article-img-link" href="image/s5/s5_17.jpg" target="_blank"><img class="article-img"
+                    src="image/s5/s5_17.jpg" alt="S5 슬라이드 17"></a>
+              </div>
+              <ul>
+                <li><strong>LLM as a Judge:</strong> 이렇게 설정된 루브릭을 바탕으로 정량적 수치를 내고, 이를 다시 인간이 검증하며 신뢰를 쌓아갔습니다.</li>
+              </ul>
+
+              <h3>3. Insight: 똑똑한 모델이 곧 신뢰를 보장하지 않는다</h3>
+              <p>정량 평가 파이프라인을 통해 발견된 인사이트는 우리가 가진 직관과 꽤 달랐습니다.</p>
+              <ul>
+                <li><strong>가장 취약한 '합의적 대화':</strong> AI는 비평이나 발산은 매우 잘하지만, 의견을 하나로 모으는 <strong>'합의적 대화'</strong>를 가장 못
+                  합니다. 똑똑한 개별 모델이 모인다고 해서 팀워크(신뢰성)가 보장되지 않는 이유입니다.</li>
+                <li><strong>말투보다 중요한 '경험':</strong> HCI 관점에서 과거에는 시각적 디자인이 중요했다면, 이제는 '퍼소나'가 경험을 지배합니다. 이때 말투나 캐릭터를 예쁘게
+                  꾸미는 것보다, 에이전트에게 사회통계학적 정보와 구체적인 경험을 더 많이 주입할 때 신뢰도가 비약적으로 높아집니다.</li>
+                <li><strong>성격의 역설:</strong> 공감적이고 긍정적인 퍼소나는 아이디어를 낼 때는 훌륭하지만, 상대에게 밝은 이미지만 주려다 보니 설득이나 수렴(결단)이 필요한 단계에서
+                  책임을 회피하는 약점을 보였습니다.</li>
+              </ul>
+              <div class="article-img-grid">
+                <a class="article-img-link" href="image/s5/s5_24.jpg" target="_blank"><img class="article-img"
+                    src="image/s5/s5_24.jpg" alt="S5 슬라이드 24"></a>
+                <a class="article-img-link" href="image/s5/s5_26.jpg" target="_blank"><img class="article-img"
+                    src="image/s5/s5_26.jpg" alt="S5 슬라이드 26"></a>
+              </div>
+
+              <h3>4. Insight: 퍼소나 설계의 3축 'Who, What, How'</h3>
+              <p>신뢰할 수 있는 에이전트를 만들기 위해 엔소나는 <strong>Who(누구인가), What(무엇을 하는가), How(어떻게 말하는가)</strong>라는 세 가지 축을 기반으로 퍼소나를
+                설계했습니다. 예를 들어 서비스 기획자 퍼소나는 정보 전달에 강점을 보이고, 프로덕트 디자이너 퍼소나는 발산적 대화에 최적화되어 있는 식이죠.</p>
+              <div class="article-img-grid">
+                <a class="article-img-link" href="image/s5/s5_30.jpg" target="_blank"><img class="article-img"
+                    src="image/s5/s5_30.jpg" alt="S5 슬라이드 30"></a>
+                <a class="article-img-link" href="image/s5/s5_31.jpg" target="_blank"><img class="article-img"
+                    src="image/s5/s5_31.jpg" alt="S5 슬라이드 31"></a>
+                <a class="article-img-link" href="image/s5/s5_32.jpg" target="_blank"><img class="article-img"
+                    src="image/s5/s5_32.jpg" alt="S5 슬라이드 32"></a>
+                <a class="article-img-link" href="image/s5/s5_33.jpg" target="_blank"><img class="article-img"
+                    src="image/s5/s5_33.jpg" alt="S5 슬라이드 33"></a>
+              </div>
+
+              <h3>마치며</h3>
+              <div class="article-img-grid">
+                <a class="article-img-link" href="image/s5/s5_34.jpg" target="_blank"><img class="article-img"
+                    src="image/s5/s5_34.jpg" alt="S5 슬라이드 34"></a>
+                <a class="article-img-link" href="image/s5/s5_35.jpg" target="_blank"><img class="article-img"
+                    src="image/s5/s5_35.jpg" alt="S5 슬라이드 35"></a>
+              </div>
+              <p>AI와의 협업에서 신뢰는 저절로 생기지 않습니다. 모델을 새로 학습시키지 않더라도, 정교하게 설계된 퍼소나 정의와 엄격한 평가 체계만으로도 서비스 품질은 획기적으로 개선될 수 있습니다.
+                똑똑한 AI를 넘어 '믿을 수 있는 동료'를 만드는 일, 그것이 엔소나가 발견한 AI 시대의 새로운 문법이었습니다.</p>
+            </div>
+
+            <div class="article-sess" data-session="session-6">
+              <p class="article-lead">"이 세션은 AI에 관한 이야기가 아닙니다(This is not about AI)." 연사는 시작부터 단호했습니다. 하루가 다르게 변하는 AI라는
+                파도 앞에서 우리가 할 수 있는 최선은, 그 파도를 타는 '서퍼'가 되어 바다에서 더 많은 시간을 보내는 것뿐이라고요.</p>
+
+              <h3>1. 두 가지 자아: '직업'으로서의 나 vs '존재'로서의 나</h3>
+              <p>우리는 흔히 회사에서의 역할과 나 자신을 동일시하는 실수를 범합니다. 하지만 커리어를 길게 가져가려면 디자이너의 자아를 두 가지로 분리해야 합니다.</p>
+              <ul>
+                <li><strong>Designer as a JOB:</strong> 회사에서의 역할, KPI, 조직이 요구하는 기능적 역할입니다. 직무기술서(JD)에 갇힌 나이죠.</li>
+                <li><strong>Designer as a BEING:</strong> 내가 좋아하는 감각, 나만의 시선, 오래 지속되는 취향과 철학입니다. 회사 밖에서도 여전히 남는 '나 자체'의
+                  스타일입니다.</li>
+              </ul>
+              <p>장기적으로 30년 이상의 커리어를 버티게 하는 힘은 조직이 부여한 타이틀이 아닌, 나의 <strong>'존재적 정체성'</strong>에서 나옵니다. "60살이 되어도 링크드인이
+                살아있는 디자이너가 되고 싶다"는 말은 바로 이 정체성을 지키겠다는 선언이었습니다.</p>
+
+              <h3>2. JD는 나의 전부가 아니다: '몰입'의 신호와 사이드 프로젝트</h3>
+              <p>조직의 요구사항이 내 역량의 전부라고 믿는 순간, 디자이너의 생명력은 시듭니다. 내 안에 숨겨진 더 넓은 가능성을 발견하는 신호는 의외로 단순합니다. <strong>"일인데도 일이 아닌
+                  것처럼 몰입되는 순간"</strong>을 찾는 것이죠.</p>
+              <ul>
+                <li>누가 시키지 않았는데 계속하게 되는 작업</li>
+                <li>밤을 새워도 재미있고 성과보다 재미가 먼저인 프로젝트</li>
+              </ul>
+              <p>이런 경험들이 나의 '진짜 디자인 방향성'을 알려주는 나침반이 됩니다. 연사는 이를 위한 실험실로 사이드 프로젝트를 적극 권장했습니다. 팟캐스트, 커뮤니티 운영, 인터뷰 플랫폼 제작 등
+                회사 밖에서의 시도들이 때로는 본업보다 더 큰 반응을 얻으며 "내가 어떤 사람인지, 무엇에 끌리는지"를 선명하게 보여주기 때문입니다.</p>
+
+              <h3>3. 미래의 경쟁력: 디자이너의 아티스트화</h3>
+              <p>AI 시대에는 결과물의 퀄리티 차이가 점점 줄어들 것입니다. 기술이 상향 평준화될수록 시장의 논리는 역전됩니다. <strong>"무엇을 만들었는가(What)"보다 "누가
+                  만들었는가(Who)"</strong>가 훨씬 중요해지는 것이죠.</p>
+              <p>결국 개인이 가진 고유한 관점, 취향, 세계관 자체가 대체 불가능한 경쟁력이 됩니다. 연사는 <strong>"디자이너는 미래에 점점 더 아티스트를 닮아갈 것"</strong>이라고
+                예견하며, 가장 개인적인 디자인이 가장 오래 남는다는 진리를 일깨워주었습니다.</p>
+
+              <h3>4. Q&amp;A: 경계를 허무는 '프로덕트 빌더'의 태도</h3>
+              <p><strong>디자이너의 영역은 어디까지인가?</strong> 앞으로 경계는 점점 더 흐려질 것입니다. PM도 디자인을 하고 디자이너도 제품을 만드는 '프로덕트 빌더'의 흐름이죠.
+                중요한 건 "이게 내 일인가?"라는 선 긋기가 아니라, <strong>"나는 사용자와 제품에 어떤 기여를 할 수 있는가"</strong>라는 문제 해결 능력입니다.</p>
+              <p><strong>사이드 프로젝트를 지속하는 비결은?</strong> 의무감으로 하는 프로젝트는 절대 오래가지 못합니다. 가슴 뛰고 흥분되는, 정말 재미있는 일을 해야 합니다. 또한
+                혼자보다는 마음 맞는 동료들과 함께할 때 서로 자극을 주고받으며 지속 가능한 에너지가 생깁니다.</p>
+
+              <h3>마치며</h3>
+              <p style="font-style:italic;font-weight:600;color:var(--text2);">"가장 개인적인 디자인이 가장 오래 남는다."</p>
+              <p>AI라는 거대한 파도에 겁먹기보다, 바다(실무)에서 더 많은 시간을 보내며 나만의 안목과 정체성이라는 보드를 단단히 쥐는 것. 그것이 도구의 시대를 지나 존재의 시대로 나아가는
+                디자이너의 본질임을 깨닫게 해준 시간이었습니다.</p>
+            </div>
+
+          </div><!-- /article-wrap -->
+        </div><!-- /tab-article -->
+
+        <!-- ── Chat Tab (런치 패널 전용) ── -->
+        <div class="tab-pane" id="tab-chat">
+          <div class="chat-wrap">
+
+            <div class="chat-topic">
+              <div class="chat-topic-label">Q1 · 문제 해결보다 정의가 중요해진 시대, 해결해야 할 문제를 어떻게 찾고 정의하나요?</div>
+              <div class="chat-row">
+                <div class="chat-avatar mc">MC</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">진행자</div>
+                  <div class="chat-bubble-inner">문제 해결보다 정의가 중요해진 시대, 해결해야 할 문제를 어떻게 찾고 정의하나요?</div>
+                </div>
+              </div>
+              <div class="chat-row right">
+                <div class="chat-avatar p1">A</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">참석자 A</div>
+                  <div class="chat-bubble-inner">AI로 인해 단순 업무와 데이터 분석 시간이 압도적으로 줄어들면서, 기존에 생각만 했던 '문제 정의'를 깊게 할 수 있는 시간이
+                    늘어났습니다.</div>
+                </div>
+              </div>
+              <div class="chat-row right">
+                <div class="chat-avatar p2">C</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">참석자 C</div>
+                  <div class="chat-bubble-inner">문제 정의 시 <strong>'고통의 정도'</strong>와 <strong>'문제가 터졌을 때 발생할 비용'</strong>을
+                    구체적으로 따져봅니다. AI 툴로 시뮬레이션을 돌리며 예측 가능한 시나리오를 만드는 흐름을 활용합니다.</div>
+                </div>
+              </div>
+              <div class="chat-row">
+                <div class="chat-avatar mc">MC</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">진행자</div>
+                  <div class="chat-bubble-inner">해결해야 할 문제를 찾기 위해 더 본질에 집중하고 그 외적인 건 AI를 활용한다, 그리고 고통과 임팩트의 크기를 기준으로
+                    판단한다는 답변이셨네요.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-topic">
+              <div class="chat-topic-label">Q2 · AI 시대의 주니어에게 키우라고 말하고 싶은 역량, 그리고 줄여도 되는 역량은?</div>
+              <div class="chat-row">
+                <div class="chat-avatar mc">MC</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">진행자</div>
+                  <div class="chat-bubble-inner">AI 시대의 주니어에게 가장 키우라고 말하고 싶은 역량 한 가지, 그리고 줄여도 되는 역량은?</div>
+                </div>
+              </div>
+              <div class="chat-row right">
+                <div class="chat-avatar p3">D</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">참석자 D</div>
+                  <div class="chat-bubble-inner">큰 문제를 작게 나누는 능력과 <strong>'좋은 질문'</strong>을 하는 것이 중요합니다. 반면, 펀더멘탈보다 트렌드만
+                    쫓아 최신 스킬을 배우는 것은 지양해야 합니다.</div>
+                </div>
+              </div>
+              <div class="chat-row right">
+                <div class="chat-avatar p4">E</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">참석자 E</div>
+                  <div class="chat-bubble-inner">AI 툴을 압도적으로 많이 써보며 본인의 유리한 고지를 점하되, 손으로 직접 만들어보는 '파운데이션' 시간을 쪼개어 확보해야
+                    합니다. 단순 복제가 아닌 자기 스타일을 찾는 것이 중심이 되어야 합니다.</div>
+                </div>
+              </div>
+              <div class="chat-row">
+                <div class="chat-avatar mc">MC</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">진행자</div>
+                  <div class="chat-bubble-inner">문제를 작게 자르고 질문을 자주 하며 너무 트렌드만 쫓지 않는 것, 그리고 AI를 활용해 파운데이션을 단기간에 보완한다면 오히려
+                    폭발적으로 성장하는 계기가 될 것 같습니다.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-topic">
+              <div class="chat-topic-label">Q3 · 리더로서 팀원들의 AI 활용 역량 격차와 직무 불안감을 어떻게 관리하나요?</div>
+              <div class="chat-row">
+                <div class="chat-avatar mc">MC</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">진행자</div>
+                  <div class="chat-bubble-inner">리더로서 팀원들의 AI 활용 역량 격차와 직무 불안감을 어떻게 관리하는 것이 좋을까요?</div>
+                </div>
+              </div>
+              <div class="chat-row right">
+                <div class="chat-avatar p1">A</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">참석자 A</div>
+                  <div class="chat-bubble-inner">불안감은 안 써본 사람일수록 높습니다. 잘 쓰는 사람이 못 쓰는 사람의 업무에 직접 들어가 <strong>'같이 한번
+                      해봅시다'</strong>라는 느낌으로 온보딩을 도와주는 것이 가장 효과적입니다.</div>
+                </div>
+              </div>
+              <div class="chat-row right">
+                <div class="chat-avatar p3">D</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">참석자 D</div>
+                  <div class="chat-bubble-inner">매주 금요일 2시간을 할애해 새로운 기술을 데모하고 공유하는 시간을 가집니다. 이를 통해 모르시는 분들의 배리어를 낮추고
+                    프로젝트 적용 가능성을 함께 토론합니다.</div>
+                </div>
+              </div>
+              <div class="chat-row">
+                <div class="chat-avatar mc">MC</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">진행자</div>
+                  <div class="chat-bubble-inner">기술이 너무 빨리 변하고 있기 때문에, 팀원들끼리 기민하게 정보를 공유하고 서로 도와주는 문화가 형성되는 것이 중요해 보입니다.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-topic">
+              <div class="chat-topic-label">Q4 · AI 의존과 활용을 구분 짓는 한 끗 차이는 무엇일까요?</div>
+              <div class="chat-row">
+                <div class="chat-avatar mc">MC</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">진행자</div>
+                  <div class="chat-bubble-inner">AI 의존과 활용을 구분 짓는 한 끗 차이는 무엇일까요?</div>
+                </div>
+              </div>
+              <div class="chat-row right">
+                <div class="chat-avatar p2">C</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">참석자 C</div>
+                  <div class="chat-bubble-inner"><strong>'비판적 사고(Critical Thinking)'</strong>입니다. 툴을 쓸 수 없는 상황에서 짜증이 난다면
+                    의존하는 것입니다. 결과물을 보고 전략적으로 맞는지 리뷰하고 판단하는 능력이 중요합니다.</div>
+                </div>
+              </div>
+              <div class="chat-row right">
+                <div class="chat-avatar p4">E</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">참석자 E</div>
+                  <div class="chat-bubble-inner"><strong>'선택과 판단'</strong>의 주체가 누구인가입니다. 랜덤한 생성에 기대는 것이 의존이라면, 명확한 기준을
+                    가지고 산출물을 선택하는 것은 활용입니다.</div>
+                </div>
+              </div>
+              <div class="chat-row right">
+                <div class="chat-avatar p3">D</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">참석자 D</div>
+                  <div class="chat-bubble-inner"><strong>'내가 하는 일을 내가 아는지'</strong>가 기준입니다. 로직도 모른 채 AI 결과만 믿는 것은 위험한
+                    외주화와 같습니다.</div>
+                </div>
+              </div>
+              <div class="chat-row">
+                <div class="chat-avatar mc">MC</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">진행자</div>
+                  <div class="chat-bubble-inner">결국 최종 판단을 누가 하는가에 대한 부분이네요. AI로 선택지를 넓히되 최종 판단과 책임은 사람이 하는 것이 활용의 형태라는
+                    생각이 듭니다.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-topic">
+              <div class="chat-topic-label">Q5 · 직군 관계없이 1인 개발을 해보거나, 업무 외에 AI 툴로 아웃풋을 내본 경험이 있나요?</div>
+              <div class="chat-row">
+                <div class="chat-avatar mc">MC</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">진행자</div>
+                  <div class="chat-bubble-inner">직군 관계없이 1인 개발을 해보거나, 업무 외에 AI 툴로 아웃풋을 내본 경험이 있나요?</div>
+                </div>
+              </div>
+              <div class="chat-row right">
+                <div class="chat-avatar p1">A</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">참석자 A</div>
+                  <div class="chat-bubble-inner">바이브 코딩으로 3살 아이를 위한 숫자 공부 게임과 한글 퀴즈 게임을 개발했습니다. 또 AI 영상 툴로 가족 뮤직비디오를
+                    만들기도 했습니다. 이런 개인적 경험이 실제 업무에서 AI 도구 활용 여부를 결정하는 핵심 근거가 되었습니다.</div>
+                </div>
+              </div>
+              <div class="chat-row">
+                <div class="chat-avatar mc">MC</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">진행자</div>
+                  <div class="chat-bubble-inner">엄마의 사랑과 냉철함이 같이 느껴지는 답변이었습니다.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-topic">
+              <div class="chat-topic-label">Q6 · 대 딸깍 시대, 살아남는 방법이 뭘까요?</div>
+              <div class="chat-row">
+                <div class="chat-avatar mc">MC</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">진행자</div>
+                  <div class="chat-bubble-inner">대 딸깍 시대, 살아남는 방법이 뭘까요?</div>
+                </div>
+              </div>
+              <div class="chat-row right">
+                <div class="chat-avatar p4">E</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">참석자 E</div>
+                  <div class="chat-bubble-inner">작업물 자체보다 <strong>'누가 만드느냐'</strong>가 더 중요해집니다. 다른 사람과 아웃풋이 동일할 때, 왜 내
+                    작업이 다른지 명확하게 설명해 낼 수 있는 사람들이 사랑받을 것입니다.</div>
+                </div>
+              </div>
+              <div class="chat-row right">
+                <div class="chat-avatar p3">D</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">참석자 D</div>
+                  <div class="chat-bubble-inner">누구나 다 만들 수 있는 시대인 만큼, 직접 고객을 만나 '진짜 니즈'를 발견하고 문제 정의를 하는 능력이 생존의 핵심입니다.
+                  </div>
+                </div>
+              </div>
+              <div class="chat-row">
+                <div class="chat-avatar mc">MC</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">진행자</div>
+                  <div class="chat-bubble-inner">원래 하던 고민을 더 깊게 하게 되는 시대네요. 어떤 문제를 해결할 것인지, 어떤 색깔을 입힐 것인지에 대한 본질적인 고민이 더
+                    중요해졌습니다.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-topic">
+              <div class="chat-topic-label">Q7 · AI가 기술적 격차를 줄여준다면, 대체 불가능한 인재의 핵심 역량은 무엇일까요?</div>
+              <div class="chat-row">
+                <div class="chat-avatar mc">MC</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">진행자</div>
+                  <div class="chat-bubble-inner">AI가 기술적 격차를 줄여준다면, 대체 불가능한 인재의 핵심 역량은 무엇일까요?</div>
+                </div>
+              </div>
+              <div class="chat-row right">
+                <div class="chat-avatar p3">D</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">참석자 D</div>
+                  <div class="chat-bubble-inner">동료들이 나랑 같이 일을 하고 싶어 하게 만드는 인성과 시너지 창출 능력입니다.</div>
+                </div>
+              </div>
+              <div class="chat-row right">
+                <div class="chat-avatar p4">E</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">참석자 E</div>
+                  <div class="chat-bubble-inner">새로운 것을 거부하지 않고 먼저 뛰어드는 <strong>'호기심'</strong>입니다.</div>
+                </div>
+              </div>
+              <div class="chat-row right">
+                <div class="chat-avatar p2">C</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">참석자 C</div>
+                  <div class="chat-bubble-inner">파편화된 정보를 연결해 비즈니스 임팩트를 낼 수 있도록 풀어내는 <strong>'정보 연결 능력'</strong>입니다.
+                  </div>
+                </div>
+              </div>
+              <div class="chat-row right">
+                <div class="chat-avatar p1">A</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">참석자 A</div>
+                  <div class="chat-bubble-inner">일의 경계를 두지 않고 전체가 잘 돌아가게 만드는 <strong>'전향적 태도'</strong>입니다. 특히 '왜(Why)'를
+                    명확히 들고 설명해 줄 수 있는 역량이 필수적입니다.</div>
+                </div>
+              </div>
+              <div class="chat-row">
+                <div class="chat-avatar mc">MC</div>
+                <div class="chat-bubble">
+                  <div class="chat-name">진행자</div>
+                  <div class="chat-bubble-inner">기술이 고도화될수록 인간만이 채울 수 있는 컨텍스트의 영역이 점점 더 중요해지는 것 같습니다.</div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /chat-wrap -->
+        </div><!-- /tab-chat -->
+
+      </div><!-- /modal-body -->
+
+    </div><!-- /modal-box -->
+  </section><!-- /view-session -->
+
+  <!-- back-to-top -->
+  <button id="top-btn" aria-label="맨 위로 이동" tabindex="0">↑</button>
+
+  <script>
+    /* ═══════════════════════════════════════════
+       DATA
+    ═══════════════════════════════════════════ */
+    const SESSIONS = [
+      { id: 'session-1', track: 'PO · PM', cls: 'po', num: 'S1', title: '제품과 팀을 변화시키는 AI-powered PM', company: '카카오스타일 | 이미준' },
+      { id: 'session-2', track: 'PO', cls: 'po', num: 'S2', title: '생성형 AI 세상에서 살아남기', company: '미리디 | 신희찬' },
+      { id: 'session-3', track: 'UX Design', cls: 'ux', num: 'S3', title: 'AI 시대, 지휘자가 된 디자이너', company: '뱅크샐러드 | 홍성준' },
+      { id: 'session-4', track: 'PO · PM', cls: 'po', num: 'S4', title: 'Back to the Origin — Vertical 고객 전략', company: '오늘의집 | 김민수' },
+      { id: 'session-5', track: 'UX Design', cls: 'ux', num: 'S5', title: 'AI 페르소나, 어떻게 하면 믿을 수 있을까요?', company: '네이버 | 양희연, 이호동' },
+      { id: 'session-6', track: 'UX Design', cls: 'ux', num: 'S6', title: 'AI 시대에도 변하지 않는 디자이너의 본질 찾기', company: 'Goodle | 이정영' },
+      { id: 'lunch-panel', track: '런치 패널', cls: 'special', num: '별첨', title: '런치 패널 토크 — 현장 토론 풀버전', company: '패널 토론' },
+    ];
+
+    /* ═══════════════════════════════════════════
+       DOM REFS
+    ═══════════════════════════════════════════ */
+    const viewSession = document.getElementById('view-session');
+    const modalBox = document.getElementById('modal-box');
+    const modalBody = modalBox.querySelector('.modal-body');
+    const btnClose = document.getElementById('btn-close');
+    const topbarPill = document.getElementById('topbar-track-pill');
+    const topBtn = document.getElementById('top-btn');
+    const tabBtnSummary = document.querySelector('.tab-btn[data-tab="summary"]');
+    const tabBtnArticle = document.getElementById('tab-btn-article');
+    const tabBtnChat = document.getElementById('tab-btn-chat');
+    const tabSummary = document.getElementById('tab-summary');
+    const tabArticle = document.getElementById('tab-article');
+    const tabChat = document.getElementById('tab-chat');
+    const tabBtns = document.querySelectorAll('.tab-btn');
+
+    /* sessions that have article content */
+    const ARTICLE_SESSIONS = new Set(['session-1', 'session-2', 'session-3', 'session-4', 'session-5', 'session-6']);
+
+    /* ── TAB SWITCHING ── */
+    function switchTab(tabName) {
+      tabBtns.forEach(b => b.classList.toggle('active', b.dataset.tab === tabName));
+      tabSummary.classList.toggle('active', tabName === 'summary');
+      tabArticle.classList.toggle('active', tabName === 'article');
+      tabChat.classList.toggle('active', tabName === 'chat');
+      const activePane = modalBody.querySelector('.tab-pane.active');
+      if (activePane) activePane.scrollTop = 0;
+    }
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (!btn.disabled) switchTab(btn.dataset.tab);
+      });
+    });
+
+    /* ═══════════════════════════════════════════
+       MODAL OPEN / CLOSE
+    ═══════════════════════════════════════════ */
+    function openModal(sessionId) {
+      const sess = SESSIONS.find(s => s.id === sessionId);
+      if (!sess) return;
+
+      // update track pill
+      topbarPill.textContent = sess.track;
+      topbarPill.className = 'track-pill ' + sess.cls;
+
+      // show only the matching summary article
+      SESSIONS.forEach(s => {
+        const el = document.getElementById('detail-' + s.id);
+        if (el) {
+          if (s.id === sessionId) el.removeAttribute('hidden');
+          else el.setAttribute('hidden', '');
+        }
+      });
+
+      // show only the matching article-sess pane
+      document.querySelectorAll('.article-sess').forEach(el => {
+        el.classList.toggle('active', el.dataset.session === sessionId);
+      });
+
+      // show/hide tabs based on session type
+      const isPanel = sessionId === 'lunch-panel';
+      const hasArticle = ARTICLE_SESSIONS.has(sessionId);
+      tabBtnSummary.style.display = isPanel ? 'none' : '';
+      tabBtnArticle.disabled = !hasArticle;
+      tabBtnArticle.style.display = isPanel ? 'none' : '';
+      tabBtnChat.style.display = isPanel ? '' : 'none';
+
+      // reset to appropriate default tab on open
+      switchTab(isPanel ? 'chat' : 'summary');
+
+      // show modal
+      viewSession.removeAttribute('hidden');
+      document.body.classList.add('modal-open');
+    }
+
+    function closeModal() {
+      viewSession.setAttribute('hidden', '');
+      document.body.classList.remove('modal-open');
+    }
+
+    /* ═══════════════════════════════════════════
+       EVENTS
+    ═══════════════════════════════════════════ */
+
+    // close button
+    btnClose.addEventListener('click', closeModal);
+
+    // backdrop click (click on overlay, not modal-box)
+    viewSession.addEventListener('click', e => {
+      if (!modalBox.contains(e.target)) closeModal();
+    });
+
+    // prevent modal-box clicks from closing modal
+    modalBox.addEventListener('click', e => e.stopPropagation());
+
+    // card clicks — main grid + other sessions (event delegation)
+    document.addEventListener('click', e => {
+      const card = e.target.closest('a[data-session], a[href^="#session-"], a[href^="#lunch-"]');
+      if (!card) return;
+      const sessionId = card.dataset.session || card.getAttribute('href').replace('#', '');
+      const sess = SESSIONS.find(s => s.id === sessionId);
+      if (sess) {
+        e.preventDefault();
+        openModal(sessionId);
+      }
+    });
+
+    // keyboard: Escape closes modal
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && !viewSession.hidden) closeModal();
+    });
+
+    // back-to-top
+    window.addEventListener('scroll', () => {
+      topBtn.classList.toggle('show', window.scrollY > 400);
+    }, { passive: true });
+    topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    topBtn.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+    });
+  </script>
+
+</body>
+
+</html>

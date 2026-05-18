@@ -1,0 +1,9 @@
+# Media & Audio
+*.mp4
+*.m4a
+
+# Backup
+(backup)*
+
+# System files
+.DS_Store
