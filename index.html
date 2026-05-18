@@ -601,9 +601,9 @@
       border-radius: 20px;
       text-decoration: none;
       cursor: pointer;
-      transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
-                  transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
-                  box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       letter-spacing: -0.01em;
     }
@@ -1201,6 +1201,7 @@
     }
 
     @media (max-width: 480px) {
+
       .session-grid,
       .other-sessions-grid {
         grid-template-columns: 1fr;
@@ -1228,7 +1229,7 @@
 
       <nav class=grid-wrap aria-label="세션 목록">
         <div class="grid-header">
-          <a href="#lunch-panel" class="lunch-btn" tabindex="0">[패널 토크 내용보기]</a>
+          <a href="#lunch-panel" class="lunch-btn" tabindex="0">👀패널 토크 내용보기</a>
         </div>
         <div class="session-grid">
           <a href="#session-1" class="card po" tabindex="0">
